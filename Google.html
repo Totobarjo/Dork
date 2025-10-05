@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
     <style>
     body {
-      background-image: url(https://assets.faisalahmed.me/bg1.png);
-        color:#FFF;
+        background-color: #161616; /* Gris anthracite */
+        color: #FFF;
         font-size: 14pt;
-        font-family:"Merienda One";
+        font-family: "Merienda One";
         font-weight: bold;
         padding: 0px;
     }
@@ -158,62 +158,74 @@
         case 1:
             url += '+intitle:\"index of\"';
             break;
+        case 111:
+            url += '+"configmap.yaml" | "config.yaml" | "*-config.yaml" intitle:"index of"';
+            break;
+        case 1111:
+            url += '+intitle:Index of "/etc/network" | "/etc/cni/net.d"';
+            break;
+        case 11111:
+            url += '+"rbac.yaml" | "role.yaml" | "rolebinding.yaml" | "*-rbac.yaml" intitle:"index of"';
+            break;
         case 2:
-            url += '+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:config+|+ext:txt+|+ext:ora+|+ext:ini';
+            url += '+(ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:config+|+ext:txt+|+ext:ora+|+ext:ini)';
             break;
         case 3:
-            url += '+ext:sql+|+ext:dbf+|+ext:mdb';
+            url += '+(ext:sql+|+ext:dbf+|+ext:mdb)';
             break;
         case 4:
             url += '+ext:log';
             break;
         case 5:
-            url += '+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup+|+ext:~';
+            url += '+(ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup+|+ext:~)';
             break;
         case 6:
-            url += '+inurl:signup+|+inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:register+|+intitle:Signup+|+inurl:admin+|+inurl:login+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:wp-login+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:ForgotPassword+|+inurl:test+|+inurl:signin+|+inurl:sso+|+intitle:admin+|+intitle:login+|+intitle:signin+|+intitle:\"sign in\"';
+            url += '+(inurl:signup+|+inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:register+|+intitle:Signup+|+inurl:admin+|+inurl:login+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:wp-login+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:ForgotPassword+|+inurl:test+|+inurl:signin+|+inurl:sso+|+intitle:admin+|+intitle:login+|+intitle:signin+|+intitle:\"sign+in\"+|+inurl:secure)';
+            break;
+        case 66:
+            url += '+(inurl:signup+|+inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:register+|+intitle:Signup+|+inurl:admin+|+inurl:login+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:wp-login+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:ForgotPassword+|+inurl:test+|+inurl:signin+|+inurl:sso+|+inurl:secure)';
+            break;
+        case 666:
+            url += '+(inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:admin+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:sso+|+inurl:secure+|+inurl:/admin.aspx)';
             break;
         case 7:
-            url += '+intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()"';
+            url += '+(intext:"sql+syntax+near"+|+intext:"syntax+error+has+occurred"+|+intext:"incorrect+syntax+near"+|+intext:"unexpected+end+of+SQL+command"+|+intext:"Warning:+mysql_connect()"+|+intext:"Warning:+mysql_query()"+|+intext:"Warning:+pg_connect()")';
             break;
         case 8:
-            url += '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv|+ext:swf';
+            url += '+(ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv|+ext:swf)';
             break;
         case 9:
-            url += '+ext:php+intitle:phpinfo+\"published+by+the+PHP+Group\"+|+intitle:phpmyadmin+|+inurl:phpmyadmin';
+            url += '+ext:php ( (intitle:"phpinfo" intext:"HTTP_HOST") OR intitle:"phpinfo" "published by the PHP Group" OR intitle:"phpmyadmin" OR inurl:phpmyadmin )';
             break;
         case 10:
-            url += '+inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download';
+            url += '+(inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download)';
             break;
         case 11:
-            url += '+inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor';
+            url += '+(inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor)';
             break;
         case 12:
-            url += '+inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config';
+            url += '+(inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config)';
             break;
         case 13:
-            url += '+inurl:redir+|+inurl:url+|+inurl:src=http+|+inurl:r=http+|+inurl:return+|+inurl:return_url+|+inurl:rUrl+|+inurl:cancelUrl+|+inurl:redirect+|+inurl:follow+|+inurl:goto+|+inurl:returnTo+|+inurl:returnUrl+|+inurl:r_url+|+inurl:history+|+inurl:goback+|+inurl:redirectTo+|+inurl:redirectUrl+|+inurl:redirUrl';
+            url += '+(inurl:redir+|+inurl:url+|+inurl:src=http+|+inurl:r=http+|+inurl:return+|+inurl:return_url+|+inurl:rUrl+|+inurl:cancelUrl+|+inurl:redirect+|+inurl:follow+|+inurl:goto+|+inurl:returnTo+|+inurl:returnUrl+|+inurl:r_url+|+inurl:history+|+inurl:goback+|+inurl:redirectTo+|+inurl:redirectUrl+|+inurl:redirUrl)';
             break;
         case 14:
-            url += '+ext:action+|+ext:struts+|+ext:do';
+            url += '+(ext:action+|+ext:struts+|+ext:do)';
             break;
         case 15:
-            url = 'https://www.google.com/search?q=site:justpaste.it+|+site:heypasteit.com+|+site:pastebin.com+|+site:jsfiddle.net+\"' + domain_sans_tld + '\"';
+            url = 'https://www.google.com/search?q=(site:justpaste.it+|+site:heypasteit.com+|+site:pastebin.com+|+site:jsfiddle.net)+\"' + domain_sans_tld + '\"';
             break;
         case 16:
             url = 'https://www.google.com/search?q=site:linkedin.com+employees+' + site;
             break;
         case 17:
-            url += '+inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git"+' + site + '+-github';
+            url += '+(inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git")+' + site + '+-github';
             break;
         case 18:
             url = 'https://www.google.com/search?q=site:*.' + site;
             break;
         case 19:
             url = 'https://www.google.com/search?q=site:*.*.' + site;
-            break;
-        case 20:
-            url += '+inurl:wp-content+|+inurl:wp-includes';
             break;
         case 21:
             url =  'https://github.com/search?q="*.' + site +'"&type=host';
@@ -273,31 +285,34 @@
             url =  'https://www.google.com/search?q=inurl:"/.git"+' + site + '+-github';
             break;
         case 40:
-            url +=  '+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv+|+filetype:doc+|+filetype:docx+|+filetype:xls+|+filetype:xlsx+|+filetype:ppt+|+filetype:pptx+|+filetype:mdb+|+filetype:pdf+|+filetype:sql+|+filetype:txt+|+filetype:rtf+|+filetype:csv+|+filetype:xml+|+filetype:conf+|+filetype:dat+|+filetype:ini+|+filetype:log';
+            url +=  '+(ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv+|+ext:doc+|+ext:docx+|+ext:xls+|+ext:xlsx+|+ext:ppt+|+ext:pptx+|+ext:mdb+|+ext:pdf+|+ext:sql+|+ext:txt+|+ext:rtf+|+ext:csv+|+ext:xml+|+ext:conf+|+ext:dat+|+ext:ini+|+ext:log)';
             break;
         case 41:
-            url +=  '+index%20of:id_rsa%20id_rsa.pub+|+filetype:py+|+filetype:html+|+filetype:sh+|+filetype:odt+|+filetype:key+|+filetype:sign+|+filetype:md+|+filetype:old+|+filetype:bin+|+filetype:cer+|+filetype:crt+|+filetype:pfx+|+filetype:crl+|+filetype:crs+|+filetype:der';
+            url +=  '+(index%20of:id_rsa%20id_rsa.pub+|+ext:py+|+ext:html+|+ext:sh+|+ext:odt+|+ext:key+|+ext:sign+|+ext:md+|+ext:old+|+ext:bin+|+ext:cer+|+ext:crt+|+ext:pfx+|+ext:crl+|+ext:crs+|+ext:der)';
             break;
         case 42:
-            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\"+filetype:doc+|+intitle:confidential+OR+intitle:restricted+intext:salary+filetype:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+filetype:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+filetype:pdf+|+intext:confidential+intitle:filetype:xls+OR+filetype:xlsx+OR+filetype:csv"';
+            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\"+ext:doc)';
+            break;
+        case 422:
+            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(intitle:confidential+OR+intitle:restricted+intext:salary+ext:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+ext:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+ext:pdf+|+intext:confidential+intitle:ext:xls+OR+ext:xlsx+OR+ext:csv+|+intext:"internal use only")';
             break;
         case 43:
-            url +=  '+\"PHP+Parse+error\"+|+\"PHP+Warning\"+|+\"PHP+Error\"';
+            url +=  '+(\"PHP+Parse+error\"+|+\"PHP+Warning\"+|+\"PHP+Error\"+|+\"PHP+Fatal+error:\"+ext:log+OR+ext:txt)';
             break;
         case 44:
-            url +=  '+inurl:wp-content+|+inurl:wp-includes';
+            url +=  '+(inurl:wp-content+|+inurl:wp-includes)';
             break;
         case 45:
-            url =  'https://www.google.com/search?q=site:trello.com+|+site:*.atlassian.net+\"' + domain_sans_tld + '\"';
+            url =  'https://www.google.com/search?q=(site:trello.com+|+site:*.atlassian.net)+\"' + domain_sans_tld + '\"';
             break;
         case 46:
-            url =  'https://www.google.com/search?q=\"' + domain_sans_tld + '\"+intitle:%22index%20of%22%20%22parent%20directory%22+|+intitle:%22index%20of%22%20%22DCIM%22+|+intitle:%22index%20of%22%20%22ftp%22+|+intitle:%22index%20of%22%20%22backup%22+|+intitle:%22index%20of%22%20%22mail%22+|+intitle:%22index%20of%22%20%22password%22+|+intitle:%22index%20of%22%20%22pub%22+|+intitle:%22index%20of%22%20%22.git%22';
+            url =  'https://www.google.com/search?q=\"' + domain_sans_tld + '\"+(intitle:%22index%20of%22%20%22parent%20directory%22+|+intitle:%22index%20of%22%20%22DCIM%22+|+intitle:%22index%20of%22%20%22ftp%22+|+intitle:%22index%20of%22%20%22backup%22+|+intitle:%22index%20of%22%20%22mail%22+|+intitle:%22index%20of%22%20%22password%22+|+intitle:%22index%20of%22%20%22pub%22+|+intitle:%22index%20of%22%20%22.git%22)';
             break;
         case 47:
-            url =  'https://www.google.com/search?q=site:github.com+|+site:cryptome.org+|+site:gitlab.com+|+site:bitbucket.org+\"' + domain_sans_tld + '\"';
+            url =  'https://www.google.com/search?q=(site:github.com+|+site:cryptome.org+|+site:gitlab.com+|+site:bitbucket.org)+\"' + domain_sans_tld + '\"';
             break;
         case 48:
-            url =  'https://www.google.com/search?q=site:.s3.amazonaws.com+|+site:.onedrive.live.com+|+site:.dl.dropbox.com+|site:.drive.google.com+|+site:storage.googleapis.com+|+site:amazonaws.com+\"' + domain_sans_tld + '\"';
+            url =  'https://www.google.com/search?q=(site:.s3.amazonaws.com+|+site:.onedrive.live.com+|+site:.dl.dropbox.com+|site:.drive.google.com+|+site:storage.googleapis.com+|+site:amazonaws.com)+\"' + domain_sans_tld + '\"';
             break;
         case 49:
             url =  'https://www.google.com/search?q=intitle:traefik+inurl:8080/dashboard+\"' + domain_sans_tld + '\"';
@@ -306,43 +321,142 @@
             url =  'https://www.google.com/search?q=intitle:\"Dashboard+[Jenkins]\"+\"' + domain_sans_tld + '\"';
             break;
         case 51:
-            url =  'https://www.google.com/search?q=site:sharecode.io+|+site:controlc.com+|+site:codepad.co+|site:ideone.com+|+site:codebeautify.org+|+site:jsdelivr.com+|+site:codeshare.io+|+site:codepen.io+|+site:repl.it+|+site:jsfiddle.net+\"' + domain_sans_tld + '\"';
+            url =  'https://www.google.com/search?q=(site:sharecode.io+|+site:controlc.com+|+site:codepad.co+|site:ideone.com+|+site:codebeautify.org+|+site:jsdelivr.com+|+site:codeshare.io+|+site:codepen.io+|+site:repl.it+|+site:jsfiddle.net)+\"' + domain_sans_tld + '\"';
             break;
         case 52:
-            url =  'https://www.google.com/search?q=site:gitter.im+|+site:papaly.com+|+site:productforums.google.com+|+site:coggle.it+|+site:replt.it+|+site:ycombinator.com+|+site:libraries.io+|+site:npm.runkit.com+|+site:npmjs.com+|+site:scribd.com+\"' + domain_sans_tld + '\"';
+            url =  'https://www.google.com/search?q=(site:gitter.im+|+site:papaly.com+|+site:productforums.google.com+|+site:coggle.it+|+site:replt.it+|+site:ycombinator.com+|+site:libraries.io+|+site:npm.runkit.com+|+site:npmjs.com+|+site:scribd.com)+\"' + domain_sans_tld + '\"';
             break;
         case 53:
             url =  'https://www.google.com/search?q=site:stackoverflow.com+\"' + site + '\"';
             break;
         case 54:
-            url +=  '+ext:php+|+ext:aspx+|+ext:asp+|+ext:jsp+|+ext:jspx+|+ext:do+|+ext:action';
+            url +=  '+(ext:php+|+ext:aspx+|+ext:asp+|+ext:jsp+|+ext:jspx+|+ext:do+|+ext:action)';
             break;
         case 55:
-            url +=  '+intext:"Swagger+UI"+|+intext:swagger+filetype:log+|+intitle:\"Swagger+UI+-+\"+\"Show/Hide\"+|+intitle:"Swagger+UI"+|+inurl:"swagger"+|+inurl:\"swagger-ui/index.html\"+|+inurl:/swagger/index.html+|+inurl:apidocs+|+inurl:\"api-docs\"+|+inurl:swagger+|+inurl:api-explorer';
+            url +=  '+(intext:"Swagger+UI"+|+intext:swagger+ext:log+|+intitle:\"Swagger+UI+-+\"+\"Show/Hide\"+|+intitle:"Swagger+UI"+|+inurl:"swagger"+|+inurl:\"swagger-ui/index.html\"+|+inurl:/swagger/index.html+|+inurl:apidocs+|+inurl:\"api-docs\"+|+inurl:swagger+|+inurl:api-explorer)';
+            break;
+        case 555:
+            url +=  '+intitle:\"/zircote/swagger-php\"';
             break;
         case 56:
-            url +=  '+ext:log+|+ext:txt+|+ext:conf+|+ext:cnf+|+ext:ini+|+ext:env+|+ext:sh+|+ext:bak+|+ext:backup+|+ext:swp+|+ext:old+|+ext:~+|+ext:git+|+ext:svn+|+ext:htpasswd+|+ext:htaccess';
+            url +=  '+(ext:log+|+ext:txt+|+ext:conf+|+ext:cnf+|+ext:ini+|+ext:env+|+ext:sh+|+ext:bak+|+ext:backup+|+ext:swp+|+ext:old+|+ext:~+|+ext:git+|+ext:svn+|+ext:htpasswd+|+ext:htaccess+|+ext:json)';
             break;
         case 57:
-            url +=  '+inurl:config.inc.php+|+inurl:config.php+|+inurl:configuration.php+|+inurl:credentials+|+inurl:credentials.xml+|+inurl:database+|+inurl:.env+|+inurl:id_dsa+|+inurl:id_rsa+|+inurl:LocalSettings.php+|+inurl:passwd+|+inurl:secrets.yml+|+inurl:secret_token.rb+|+inurl:settings.py+|+inurl:shadow+|+inurl:.sqlite+|+inurl:wp-config.php';
+            url +=  '+(inurl:config.inc.php+|+inurl:config.php+|+inurl:configuration.php+|+inurl:credentials+|+inurl:credentials.xml+|+inurl:database+|+inurl:.env+|+inurl:id_dsa+|+inurl:id_rsa+|+inurl:LocalSettings.php+|+inurl:passwd+|+inurl:secrets.yml+|+inurl:secret_token.rb+|+inurl:settings.py+|+inurl:shadow+|+inurl:.sqlite+|+inurl:wp-config.php|inurl:/conf)';
             break;
         case 58:
-            url +=  '+intext:"CEO"+OR+intext:"CFO"+OR+intext:"COO"+intitle:"email"+filetype:txt+|+intext:\"marketing+strategy\"+OR+intext:\"business+development\"+intitle:"confidential"+filetype:pdf+|+intitle:\"board+meeting\"+OR+intitle:\"shareholder+report\"+intext:"draft"+filetype:pdf+|+intitle:\"corporate+secrets\"+OR+intitle:\"proprietary+information\"+intext:"email"+filetype:docx+|+intitle:\"internal+memo\"+OR+intitle:\"confidential+communication\"+intext:"HR"+filetype:doc';
+            url +=  '+(intext:"CEO"+OR+intext:"CFO"+OR+intext:"COO"+intitle:"email"+ext:txt+|+intext:\"marketing+strategy\"+OR+intext:\"business+development\"+intitle:"confidential"+ext:pdf+|+intitle:\"board+meeting\"+OR+intitle:\"shareholder+report\"+intext:"draft"+ext:pdf+|+intitle:\"corporate+secrets\"+OR+intitle:\"proprietary+information\"+intext:"email"+ext:docx+|+intitle:\"internal+memo\"+OR+intitle:\"confidential+communication\"+intext:"HR"+ext:doc)';
             break;
         case 59:
-            url +=  '+intext:\"financial+report\"+intitle:\"' + domain_sans_tld + '\"+OR+intitle:"quarterly"+filetype:pdf+|+intext:\"investment+portfolio\"+OR+intext:\"bank+statement\"+intitle:"confidential"+filetype:pdf+|+intext:\"tax+return\"+OR+intext:\"audit+report\"+intitle:"restricted"+filetype:pdf+|+intitle:\"budget+plan\"+OR+intitle:\"financial+forecast\"+intext:"confidential"+filetype:docx+|+intitle:"invoice"+OR+intitle:\"billing+statement\"+intext:"confidential"+filetype:xls';
+            url +=  '+(intext:\"financial+report\"+intitle:\"' + domain_sans_tld + '\"+OR+intitle:"quarterly"+ext:pdf+|+intext:\"investment+portfolio\"+OR+intext:\"bank+statement\"+intitle:"confidential"+ext:pdf+|+intext:\"tax+return\"+OR+intext:\"audit+report\"+intitle:"restricted"+ext:pdf+|+intitle:\"budget+plan\"+OR+intitle:\"financial+forecast\"+intext:"confidential"+ext:docx+|+intitle:"invoice"+OR+intitle:\"billing+statement\"+intext:"confidential"+ext:xls)';
             break;
         case 60:
-            url +=  '+intext:\"employee+directory\"+OR+intext:\"HR+records\"+intitle:"confidential"+filetype:xlsx+|+intext:"resume"+OR+intext:"CV"+OR+intext:\"job+application\"+filetype:pdf+|+intitle:\"employee+contract\"+OR+intitle:\"confidential+employment+agreement\"+filetype:docx+|+intitle:\"performance+review\"+OR+intitle:\"disciplinary+action\"+intext:"confidential"+filetype:pdf+|+intitle:\"personnel+file\"+OR+intitle:\"staff+records\"+intext:"confidential"+filetype:doc';
+            url +=  '+(intext:\"employee+directory\"+OR+intext:\"HR+records\"+intitle:"confidential"+ext:xlsx+|+intext:"resume"+OR+intext:"CV"+OR+intext:\"job+application\"+ext:pdf+|+intitle:\"employee+contract\"+OR+intitle:\"confidential+employment+agreement\"+ext:docx+|+intitle:\"performance+review\"+OR+intitle:\"disciplinary+action\"+intext:"confidential"+ext:pdf+|+intitle:\"personnel+file\"+OR+intitle:\"staff+records\"+intext:"confidential"+ext:doc)';
             break;
         case 61:
-            url +=  '+intext:\"SCADA+system\"+OR+intext:\"power+grid\"+intitle:\"critical+infrastructure\"+filetype:pdf+|+intext:\"security+plan\"+OR+intext:\"network+layout\"+intitle:"confidential"+filetype:pdf+|+intitle:\"airport+security\"+OR+intitle:\"seaport+layout\"+intext:\"restricted+access\"+filetype:pdf+|+intitle:\"building+plans\"+OR+intitle:\"facility+layout\"+intext:"restricted"+filetype:docx+|+intitle:\"server+configuration\"+OR+intitle:\"database+schema\"+intext:"confidential"+filetype:txt';
+            url +=  '+(intext:\"SCADA+system\"+OR+intext:\"power+grid\"+intitle:\"critical+infrastructure\"+ext:pdf+|+intext:\"security+plan\"+OR+intext:\"network+layout\"+intitle:"confidential"+ext:pdf+|+intitle:\"airport+security\"+OR+intitle:\"seaport+layout\"+intext:\"restricted+access\"+ext:pdf+|+intitle:\"building+plans\"+OR+intitle:\"facility+layout\"+intext:"restricted"+ext:docx+|+intitle:\"server+configuration\"+OR+intitle:\"database+schema\"+intext:"confidential"+ext:txt)';
             break;
         case 62:
             url +=  '+ext:php+inurl:?';
             break;
-    }
+        case 63:
+            url +=  '+inurl:api | site:*/rest | site:*/v1 | site:*/v2 | site:*/v3';
+            break;
+        case 64:
+            url +=  '+inurl:conf | inurl:env | inurl:cgi | inurl:bin | inurl:etc | inurl:root | inurl:sql | inurl:backup | inurl:admin | inurl:php';
+            break;
+        case 65:
+            url +=  '+inurl:"error" | intitle:"exception" | intitle:"failure" | intitle:"server at" | inurl:exception | "database error" | "SQL syntax" | "undefined index" | "unhandled exception" | "stack trace"';
+            break;
+        case 6666:
+            url +=  '+inurl:q= | inurl:s= | inurl:search= | inurl:query= | inurl:keyword= | inurl:lang= inurl:%26';
+            break;
+        case 67:
+            url +=  '+inurl:url= | inurl:return= | inurl:next= | inurl:redirect= | inurl:redir= | inurl:ret= | inurl:r2= | inurl:page= inurl:%26 inurl:http';
+            break;
+        case 68:
+            url +=  '+inurl:id= | inurl:pid= | inurl:category= | inurl:cat= | inurl:action= | inurl:sid= | inurl:dir= inurl:%26';
+            break;
+        case 69:
+            url +=  '+inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= | inurl:domain= | inurl:page= inurl:%26';
+            break;
+        case 70:
+            url +=  '+inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= | inurl:locate= | inurl:doc= | inurl:conf= inurl:%26';
+            break;
+        case 71:
+            url +=  '+inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:%26';
+            break;
+        case 72:
+            url +=  '+\"choose file\" | inurl:uploadimage.php';
+            break;
+        case 73:
+            url +=  '+inurl:apidocs | inurl:api-docs | inurl:apidoc | inurl:api-doc | inurl:swagger | inurl:api-explorer | inurl:graphql | inurl:jsonws | inurl:openapi.json | inurl:redoc | inurl:classicapi';
+            break;
+        case 74:
+            url +=  '+inurl:test | inurl:env | inurl:dev | inurl:staging | inurl:sandbox | inurl:debug | inurl:temp | inurl:internal | inurl:demo';
+            break;
+        case 75:
+            url +=  '+inurl:email= | inurl:phone= | inurl:password= | inurl:secret= inurl:%26';
+            break;
+        case 76:
+            url +=  '+inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de';
+            break;
+        case 77:
+            url = 'https://www.google.com/search?q=site:groups.google.com \"' + site + '\"';
+            break;
+        case 78:
+            url = 'https://www.google.com/search?q=\"' + site + '\" (site:s3.amazonaws.com+|+site:blob.core.windows.net+|+site:googleapis.com+|+site:drive.google.com+|+site:dev.azure.com+|+site:onedrive.live.com+|+site:digitaloceanspaces.com+|+site:sharepoint.com+|+site:s3-external-1.amazonaws.com+|+site:s3.dualstack.us-east-1.amazonaws.com+|+site:dropbox.com/s+|+site:box.com/s)';
+            break;
+        case 100:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:s3.amazonaws.com';
+            break;
+        case 101:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:blob.core.windows.net';
+            break;
+        case 102:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:googleapis.com';
+            break;
+        case 103:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:drive.google.com';
+            break;
+        case 104:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:dev.azure.com';
+            break;
+        case 105:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:onedrive.live.com';
+            break;
+        case 106:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:digitaloceanspaces.com';
+            break;
+        case 107:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:sharepoint.com';
+            break;
+        case 108:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:s3-external-1.amazonaws.com';
+            break;
+        case 109:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:s3.dualstack.us-east-1.amazonaws.com';
+            break;
+        case 110:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:dropbox.com/s';
+            break;
+        case 111111:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:box.com/s';
+            break;
+        case 79:
+            url = 'https://www.google.com/search?q=\"' + site + '\" (site:docs.google.com inurl:\"/d/\")';
+            break;
+        case 80:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:jfrog.io';
+            break;
+        case 800:
+            url = 'https://www.google.com/search?q=site:jfrog.io ' + site + ' index';
+            break;
+        case 81:
+            url = 'https://www.google.com/search?q=\"' + site + '\" site:firebaseio.com';
+            break;
 
+    }
         window.open(url);
     
     }
@@ -355,76 +469,137 @@
     <div class="row">
       <div class="column"><div style="text-align: right;">
         <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(1)">Directory listing vulnerabilities (index of)</a><br/>  
-    &#128269; <a href="#" onclick="google_it(2)">Exposed Configuration files</a><br/>
+
+            <div style="font-weight: bold; color: rgb(89, 89, 89); font-size: 30px;; margin-bottom: 1mm;">
+                <span style="text-decoration: none;">🕵️</span>
+                <span style="text-decoration: underline;">PII</span>
+                
+            </div>
+    &#128269; <a href="#" onclick="google_it(57)">Juicy Filename</a><br/>
+    &#128269; <a href="#" onclick="google_it(56)">Juicy Extensions</a><br/>
+    &#128269; <a href="#" onclick="google_it(65)">Server Errors</a><br/>
+    &#128269; <a href="#" onclick="google_it(61)">Sensitive Infrastructure Data</a><br/>
     &#128269; <a href="#" onclick="google_it(3)">Exposed Database files</a><br/> 
-    &#128269; <a href="#" onclick="google_it(10)">Find WordPress</a><br/>	
-    &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
-    &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
-    &#128269; <a href="#" onclick="google_it(6)">Login / Register / Admin pages</a><br/>
-    &#128269; <a href="#" onclick="google_it(7)">SQL errors</a><br/>
-    &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
-    &#128269; <a href="#" onclick="google_it(9)">phpinfo(), phpmyadmin</a><br/>
-    &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors</a><br/>
-    &#128269; <a href="#" onclick="google_it(12)">Install / Setup files</a><br/>
-    &#128269; <a href="#" onclick="google_it(13)">Open Redirects</a><br/>
-    &#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
-    &#128269; <a href="#" onclick="google_it(15)">Pastebin-like sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
     &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
-    &#128269; <a href="#" onclick="google_it(54)">Files php, aspx</a><br/>
-    &#128269; <a href="#" onclick="google_it(55)">Swagger</a><br/>
+    &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
+    &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
+    &#128269; <a href="#" onclick="google_it(42)">Confidential documents 1</a><br/>
+    &#128269; <a href="#" onclick="google_it(422)">Confidential documents 2</a><br/>
+    &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
+    &#128269; <a href="#" onclick="google_it(40)">Exposed documents 1</a><br/>
+    &#128269; <a href="#" onclick="google_it(41)">Exposed documents 2</a><br/>
+    &#128269; <a href="#" onclick="google_it(59)">Financial Records</a><br/>
+    &#128269; <a href="#" onclick="google_it(58)">Corporate Communications</a><br/>
+    &#128269; <a href="#" onclick="google_it(2)">Exposed Configuration files</a><br/>
+    &#128269; <a href="#" onclick="google_it(1)">Directory listing vulnerabilities (index of) 1</a><br/>
+    &#128269; <a href="#" onclick="google_it(111)">Directory listing vulnerabilities (index of) 2</a><br/>
+    &#128269; <a href="#" onclick="google_it(1111)">Directory listing vulnerabilities (index of) 3</a><br/>
+    &#128269; <a href="#" onclick="google_it(11111)">Directory listing vulnerabilities (index of) 4</a><br/>
+    &#128269; <a href="#" onclick="google_it(64)">High % inurl keywords</a><br/>
+    &#128269; <a href="#" onclick="google_it(39)">.git folders</a><br/>
+    &#128269; <a href="#" onclick="google_it(12)">Install / Setup files</a><br/>
+    &#128269; <a href="#" onclick="google_it(9)">phpinfo(), phpmyadmin</a><br/>
     &#128269; <a href="#" onclick="google_it(60)">Employee Information</a><br/>
+    &#128269; <a href="#" onclick="google_it(47)">GitLab / GitHub / Bitbucket</a><br/>
+    &#128269; <a href="#" onclick="google_it(21)">Search in Github</a><br/>
+    &#128269; <a href="#" onclick="google_it(48)">Cloud buckets S3 / GCP</a><br/>
+    &#128269; <a href="#" onclick="google_it(51)">Code share sites</a><br/>
+    &#128269; <a href="#" onclick="google_it(15)">Pastebin-like sites</a><br/>
+    &#128269; <a href="#" onclick="google_it(53)">Stackoverflow</a><br/>
+    &#128269; <a href="#" onclick="google_it(52)">Other 3rd parties sites</a><br/>
+
+    <br/><br/>
+    
     
 
     </div></div></div>
     <div class="column"><div style="text-align: center;">
         <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(42)">Confidential documents</a><br/>
-    &#128269; <a href="#" onclick="google_it(43)">PHP errors</a><br/>
-    &#128269; <a href="#" onclick="google_it(45)">Project management sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(47)">GitLab / GitHub / Bitbucket</a><br/>
-    &#128269; <a href="#" onclick="google_it(49)">Traefik</a><br/>
-    &#128269; <a href="#" onclick="google_it(51)">Code share sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(53)">Stackoverflow</a><br/>
-    &#128269; <a href="#" onclick="google_it(46)">Path traversal</a><br/>
-    &#128269; <a href="#" onclick="google_it(48)">Cloud buckets S3 / GCP</a><br/>
-    &#128269; <a href="#" onclick="google_it(50)">Jenkins</a><br/>
-    &#128269; <a href="#" onclick="google_it(52)">Other 3rd parties sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(40)">Exposed documents 1</a><br/>
-    &#128269; <a href="#" onclick="google_it(41)">Exposed documents 2</a><br/>
-    &#128269; <a href="#" onclick="google_it(44)">Wordpress files</a><br/>
-    &#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
-    &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
-    &#128269; <a href="#" onclick="google_it(39)">.git folders</a><br/>
-    &#128269; <a href="#" onclick="google_it(56)">Juicy Extensions</a><br/>
-    &#128269; <a href="#" onclick="google_it(59)">Financial Records</a><br/>
-    &#128269; <a href="#" onclick="google_it(61)">Sensitive Infrastructure Data</a><br/>
+            <div style="font-weight: bold; color: rgb(89, 89, 89); font-size: 30px;; margin-bottom: 1mm;">
+                <span style="text-decoration: underline;">Dork taksec</span>
+                
+            </div>
+    
+    &#128269; <a href="#" onclick="google_it(6666)">XSS prone parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(67)">Open Redirect prone parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(68)">SQLi Prone Parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(69)">SSRF Prone Parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(70)">LFI Prone Parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
+    &#128269; <a href="#" onclick="google_it(72)">File upload endpoints</a><br/>
+    &#128269; <a href="#" onclick="google_it(73)">API Docs</a><br/>
+    &#128269; <a href="#" onclick="google_it(74)">Test Environments</a><br/>
+    &#128269; <a href="#" onclick="google_it(75)">Sensitive Parameters (email, phone, password)</a><br/>
+    &#128269; <a href="#" onclick="google_it(76)">Adobe Experience Manager (AEM)</a><br/>
+    &#128269; <a href="#" onclick="google_it(77)">Google Groups</a><br/>
+    &#128269; <a href="#" onclick="google_it(80)">JFrog Artifactory</a><br/>
+    &#128269; <a href="#" onclick="google_it(800)">JFrog Artifactory Index of</a><br/>
+    &#128269; <a href="#" onclick="google_it(81)">Firebase</a><br/>
+    &#128269; <a href="#" onclick="google_it(78)">Cloud Storage (12 sites)</a><br/>
+    <br/>
+    <span style="font-weight: bold; color: rgb(89, 89, 89); font-size: 30px;; margin-bottom: 1mm;text-decoration: underline;">
+        Cloud Storage individuel</span><br/>
+    &#128269; <a href="#" onclick="google_it(100)">s3.amazonaws.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(108)">s3-external-1.amazonaws.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(109)">s3.dualstack.us-east-1.amazonaws.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(79)">docs.google.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(102)">googleapis.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(103)">drive.google.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(105)">onedrive.live.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(101)">blob.core.windows.net</a><br/>
+    &#128269; <a href="#" onclick="google_it(107)">sharepoint.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(104)">dev.azure.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(106)">digitaloceanspaces.com</a><br/>
+    &#128269; <a href="#" onclick="google_it(110)">dropbox.com/s</a><br/>
+    &#128269; <a href="#" onclick="google_it(111111)">box.com/s</a><br/>
+    <br/>
+
+
+
+
 
     </div></div></div>
     <div class="column"><div style="text-align: left;">
         <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(20)">Find WordPress #2</a><br/>
+            <br/><br/>
+    &#128269; <a href="#" onclick="google_it(6)">Login / Register / Admin pages <span style="color: rgb(255, 166, 0);">(big)</span></a><br/>
+    &#128269; <a href="#" onclick="google_it(66)">Login / Register / Admin pages <span style="color: rgb(255, 166, 0);">(small)</span></a><br/>
+    &#128269; <a href="#" onclick="google_it(666)">Admin pages + Panel</a><br/>
+    &#128269; <a href="#" onclick="google_it(43)">PHP errors</a><br/>
     &#128269; <a href="#" onclick="google_it(33)">Find WordPress [Wayback Machine]</a><br/>
-    &#128269; <a href="#" onclick="google_it(21)">Search in GITHUB</a><br/>
-    &#128269; <a href="#" onclick="google_it(31)">Search in OpenBugBounty domain</a><br/>
-    &#128269; <a href="#" onclick="google_it(38)">Search in OpenBugBounty subdomain</a><br/>
     &#128269; <a href="#" onclick="google_it(32)">Search in Reddit</a><br/>
     &#128269; <a href="#" onclick="google_it(22)">Test CrossDomain</a><br/>
     &#128269; <a href="#" onclick="google_it(23)">Check in ThreatCrowd</a><br/>
+    &#128269; <a href="#" onclick="google_it(62)">PHP extension with parameter in URL</a><br/>
+    &#128269; <a href="#" onclick="google_it(30)">Check in crt.sh</a><br/>
     &#128269; <a href="#" onclick="google_it(24)">Find .SWF file (Google)</a><br/>
     &#128269; <a href="#" onclick="google_it(25)">Find .SWF file (Yandex)</a><br/>
     &#128269; <a href="#" onclick="google_it(26)">Search SWF in WayBack Machine</a><br/>
     &#128269; <a href="#" onclick="google_it(27)">Search in WayBack Machine #2</a><br/>
     &#128269; <a href="#" onclick="google_it(28)">Search in WayBack Machine #3</a><br/>
     &#128269; <a href="#" onclick="google_it(29)">Search in WayBack Machine [List/All]</a><br/>
-    &#128269; <a href="#" onclick="google_it(30)">Check in crt.sh</a><br/>
     <!-- &#128269; Check in CENSYS <u><a href="#" onclick="google_it(34)">[IP4]</a></u> | <u><a href="#" onclick="google_it(35)">[DOMAINS]</a></u> | <u><a href="#" onclick="google_it(36)">[CERTS]</a></u><br/> -->
     &#128269; <a href="#" onclick="google_it(36)">Check in CENSYS [HOSTS]</a><br/>
     &#128269; <a href="#" onclick="google_it(37)">Search in SHODAN</a><br/>
-    &#128269; <a href="#" onclick="google_it(57)">Juicy Filename</a><br/>
-    &#128269; <a href="#" onclick="google_it(58)">Corporate Communications</a><br/>
-    &#128269; <a href="#" onclick="google_it(62)">PHP extension with parameter in URL</a><br/>
+    &#128269; <a href="#" onclick="google_it(31)">Search in OpenBugBounty domain</a><br/>
+    &#128269; <a href="#" onclick="google_it(38)">Search in OpenBugBounty subdomain</a><br/>
+    &#128269; <a href="#" onclick="google_it(49)">Traefik</a><br/>
+    &#128269; <a href="#" onclick="google_it(46)">Path traversal</a><br/>
+    &#128269; <a href="#" onclick="google_it(50)">Jenkins</a><br/>
+    &#128269; <a href="#" onclick="google_it(44)">Wordpress files</a><br/>
+    &#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
+    &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
+    &#128269; <a href="#" onclick="google_it(10)">Find WordPress</a><br/>	
+    &#128269; <a href="#" onclick="google_it(7)">SQL errors</a><br/>
+    &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors</a><br/>
+    &#128269; <a href="#" onclick="google_it(13)">Open Redirects</a><br/>
+    &#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
+    &#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
+    &#128269; <a href="#" onclick="google_it(54)">Files php, aspx</a><br/>
+    &#128269; <a href="#" onclick="google_it(63)">API Endpoints</a><br/>
+    &#128269; <a href="#" onclick="google_it(55)">Swagger 1</a><br/>
+    &#128269; <a href="#" onclick="google_it(555)">Swagger 2</a><br/>
 
 
       </div>
@@ -435,25 +610,68 @@
     </div></div></form>
     <div style="clear: both;"></div>
     <hr>
-    <div style="font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #0077ff, 0 0 5px #0077ff, 0 0 5px #0077ff;color: #FFF">Helper Websites<br></div><br>
     
-    <div style="text-align: center;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
-        <div style="display: inline-block; text-align: left;">
-    🔵 <a href="https://requestbin.net/" rel="noreferrer noopener" target="_blank">DNSBin - The request.bin of DNS!</a><br/>
-    🔵 <a href="https://hackertarget.com/wordpress-security-scan/" rel="noreferrer noopener" target="_blank">WordPress Scan #1</a><br/>
-    🔵 <a href="https://wprecon.com/" rel="noreferrer noopener" target="_blank">WordPress Scan #2</a><br/>
-    🔵 <a href="https://developers.facebook.com/tools/ct/" rel="noreferrer noopener" target="_blank">Facebook Certificate Transparency Monitoring [Recon]</a><br/>
-    🔵 <a href="https://www.smartconversion.com/unit_conversion/IP_Address_Converter.aspx" rel="noreferrer noopener" target="_blank">IP converter</a><br/>
-    🔵 <a href="https://whoisrequest.com/history/" rel="noreferrer noopener" target="_blank">Domain History Checker</a><br/>
-    🔵 <a href="https://publicwww.com/" rel="noreferrer noopener" target="_blank">Source code search engine</a><br/>
+    <div style="display: flex; justify-content: center; gap: 20px;">
+        <div style="width: 30%; text-align: center;">
+            <div style="font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #0077ff, 0 0 5px #0077ff, 0 0 5px #0077ff;color: #FFF">Helper Websites<br></div><br>
+            <div style="text-align: center;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
+                <div style="display: inline-block; text-align: left;">
+                    🔵 <a href="https://requestbin.net/" rel="noreferrer noopener" target="_blank">DNSBin - The request.bin of DNS!</a><br/>
+                    🔵 <a href="https://hackertarget.com/wordpress-security-scan/" rel="noreferrer noopener" target="_blank">WordPress Scan #1</a><br/>
+                    🔵 <a href="https://wprecon.com/" rel="noreferrer noopener" target="_blank">WordPress Scan #2</a><br/>
+                    🔵 <a href="https://developers.facebook.com/tools/ct/" rel="noreferrer noopener" target="_blank">Facebook Certificate Transparency Monitoring [Recon]</a><br/>
+                    🔵 <a href="https://www.smartconversion.com/unit_conversion/IP_Address_Converter.aspx" rel="noreferrer noopener" target="_blank">IP converter</a><br/>
+                    🔵 <a href="https://whoisrequest.com/history/" rel="noreferrer noopener" target="_blank">Domain History Checker</a><br/>
+                    🔵 <a href="https://publicwww.com/" rel="noreferrer noopener" target="_blank">Source code search engine</a><br/>
+                </div>
+            </div>
+        </div>
+    
+        <div style="width: 30%; text-align: center;">
+            <div style="margin: 0px 0px 8px 0px;font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #0077ff, 0 0 5px #0077ff, 0 0 5px #0077ff;color: #FFF">Self Hosted Bug Bounty (💲)<br></div>
+            <div style="text-align: center ; margin: 20px 0px 30px 0px ; font-size: 14pt ; color:rgb(255, 166, 0)">Penser à changer les dates pour afficher les + récents en premier<br>(Outils => Date indifférente => Choisir) </div>
+            <div style="text-align: center;font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;">
+                <div style="display: inline-block; text-align: left;">
+                    🔵 <a href='https://www.google.com/search?q=site:*/security.txt "bounty"' rel="noreferrer noopener" target="_blank">site:*/security.txt "bounty"</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=site:site:help.*.* inurl:bounty' rel="noreferrer noopener" target="_blank">site:help.*.* inurl:bounty</a><br/>
+                    <br/>
+
+                    <div style="margin: 0px 0px 3px 4px ; font-size: 12pt ; color:rgb(89, 89, 89)">Avec mots clés <span style="color:#fb00de">"vulnerability disclosure program"</span></div>
+                    
+                    🔵 <a href='https://www.google.com/search?q=vulnerability disclosure program "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 1</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=vulnerability disclosure program "bounty" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 2</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=site:*.fr vulnerability disclosure program "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Par TLD (.fr de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=vulnerability disclosure program "reward" "€" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Reward currency (€ de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=vulnerability disclosure program "reward" "paypal" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Payment Method (Paypal de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=vulnerability disclosure program "reward" ("all publicly accessible" | "all internet facing assets" | "all subdomains") -"not listed" -site:bugcrowd.com -site:hackerone.com -site:intigriti.com -site:yeswehack.com' rel="noreferrer noopener" target="_blank">Big scope</a><br/>
+                    <br/>
+
+                    <div style="margin: 0px 0px 3px 4px ; font-size: 12pt ; color:rgb(89, 89, 89)">Avec mots clés <span style="color:#fb00de">"bug bounty program"</span></div>
+                    🔵 <a href='https://www.google.com/search?q="bug bounty program" "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 1</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="bug bounty program" "bounty" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 2</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=site:*.fr bug bounty program "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Par TLD (.fr de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="bug bounty program" "reward" "€" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Reward currency (€ de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="bug bounty program" "reward" "paypal" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Payment Method (Paypal de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="bug bounty program" ("all publicly accessible" | "all internet facing assets" | "all subdomains") -"not listed" -site:bugcrowd.com -site:hackerone.com -site:intigriti.com -site:yeswehack.com' rel="noreferrer noopener" target="_blank">Big scope</a><br/>
+                    <br/>
+                    
+                    <div style="margin: 0px 0px 3px 4px ; font-size: 12pt ; color:rgb(89, 89, 89)">Avec mots clés <span style="color:#fb00de">"responsible program"</span></div>
+                    🔵 <a href='https://www.google.com/search?q="responsible program" "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 1</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="responsible program" "bounty" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">VDP with rewards 2</a><br/>
+                    🔵 <a href='https://www.google.com/search?q=site:*.fr "responsible program" "reward" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Par TLD (.fr de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="responsible program" "reward" "€" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Reward currency (€ de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="responsible program" "reward" "paypal" -site:hackerone.com -site:bugcrowd.com -site:yeswehack.com -site:intigriti.com' rel="noreferrer noopener" target="_blank">Payment Method (Paypal de base)</a><br/>
+                    🔵 <a href='https://www.google.com/search?q="responsible program" "reward" "paypal" ("all publicly accessible" | "all internet facing assets" | "all subdomains") -"not listed" -site:bugcrowd.com -site:hackerone.com -site:intigriti.com -site:yeswehack.com' rel="noreferrer noopener" target="_blank">Big scope</a><br/>
+
+
+                </div>
+            </div>
         </div>
     </div>
     
+    <br/><br/><br/>
+    
     <script src="jquery1.js"></script><script src="jquery.js"></script>
-    
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-    
-    <script  src="bg.js"></script>
     
     <!-- <br/><div style="font-family: Merienda One;text-align: center;padding: 7px 0;font-size:20px;"><img src="https://assets.faisalahmed.me/faisalname.png"></div></div>
         Original => https://dorks.faisalahmed.me/ -->
