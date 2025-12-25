@@ -155,6 +155,9 @@
         
     switch(type)
     {
+        case 0:
+            url += '';
+            break;
         case 1:
             url += '+intitle:\"index of\"';
             break;
@@ -290,11 +293,26 @@
         case 41:
             url +=  '+(index%20of:id_rsa%20id_rsa.pub+|+ext:py+|+ext:html+|+ext:sh+|+ext:odt+|+ext:key+|+ext:sign+|+ext:md+|+ext:old+|+ext:bin+|+ext:cer+|+ext:crt+|+ext:pfx+|+ext:crl+|+ext:crs+|+ext:der)';
             break;
+        case 42222222:
+            url +=  '+(\"confidential\"+OR+\"internal+use+only\"+OR+\"top+secret\"+OR+\"restricted\"+OR+"employee+only\"+OR+\"not+for+public+release")+(ext:pdf+OR+ext:doc+OR+ext:ppt+OR+ext:txt+OR+ext:csv+OR+ext:docx+OR+ext:xlsx)';
+            break;
         case 42:
-            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\"+ext:doc)';
+            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+OR+ext:ppt+|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\"+ext:doc)';
             break;
         case 422:
-            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(intitle:confidential+OR+intitle:restricted+intext:salary+ext:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+ext:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+ext:pdf+|+intext:confidential+intitle:ext:xls+OR+ext:xlsx+OR+ext:csv+|+intext:"internal use only")';
+            url =  'https://www.google.com/search?q=inurl:' + domain_sans_tld + '+(intitle:confidential+OR+intitle:restricted+intext:salary+ext:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+ext:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+ext:pdf+OR+ext:ppt+|+intext:confidential+ext:xls+OR+ext:xlsx+OR+ext:csv+|+intext:"internal use only")';
+            break;
+        case 4222:
+            url =  'https://www.google.com/search?q=inurl:' + site + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\")+(ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+OR+ext:xlsx+OR+ext:docx+OR+ext:ppt)';
+            break;
+        case 42222:
+            url =  'https://www.google.com/search?q=inurl:' + site + '+(((intitle:confidential+OR+intitle:restricted)+intext:salary)+OR+((intext:"client+data"+OR+intext:"customer+details")+intitle:confidential)+OR+((intitle:classified+OR+intitle:"top+secret")+intext:password)+OR+intext:confidential+OR+intext:"internal+use+only")+(filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+OR+filetype:xlsx+OR+filetype:docx+OR+filetype:ppt)';
+            break;
+        case 422222:
+            url += '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\")+(ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+OR+ext:xlsx+OR+ext:docx+OR+filetype:ppt)';
+            break;
+        case 4222222:
+            url +=  '+(((intitle:confidential+OR+intitle:restricted)+intext:salary)+OR+((intext:"client+data"+OR+intext:"customer+details")+intitle:confidential)+OR+((intitle:classified+OR+intitle:"top+secret")+intext:password)+OR+intext:confidential+OR+intext:"internal+use+only")+(filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+OR+filetype:xlsx+OR+filetype:docx+OR+filetype:ppt)';
             break;
         case 43:
             url +=  '+(\"PHP+Parse+error\"+|+\"PHP+Warning\"+|+\"PHP+Error\"+|+\"PHP+Fatal+error:\"+ext:log+OR+ext:txt)';
@@ -466,6 +484,8 @@
     
     <input style="outline: none;font-weight: bold" id="target" name="target" placeholder="site.com" autofocus="" type="text"><br/></div>
     
+<div style="padding-top: 1px;height: 20px; display: flex;justify-content: center;font-size: 25px">&#128269; <a href="#" onclick="google_it(0)">Requête de base <span style="color: rgb(255, 166, 0);">(site:)</span></a></div>
+
     <div class="row">
       <div class="column"><div style="text-align: right;">
         <div style="display: inline-block; text-align: left;">
@@ -483,8 +503,13 @@
     &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
     &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
     &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
-    &#128269; <a href="#" onclick="google_it(42)">Confidential documents 1</a><br/>
-    &#128269; <a href="#" onclick="google_it(422)">Confidential documents 2</a><br/>
+    &#128269; <a href="#" onclick="google_it(42222222)">Confidential documents 1</a><br/>
+    &#128269; <a href="#" onclick="google_it(422222)">Confidential documents 2</a><br/>
+    &#128269; <a href="#" onclick="google_it(4222222)">Confidential documents 3</a><br/>
+    &#128269; <a href="#" onclick="google_it(4222)">Confidential documents 4</a><br/>
+    &#128269; <a href="#" onclick="google_it(42222)">Confidential documents 5</a><br/>
+    &#128269; <a href="#" onclick="google_it(42)">Confidential documents 6</a><br/>
+    &#128269; <a href="#" onclick="google_it(422)">Confidential documents 7</a><br/>
     &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
     &#128269; <a href="#" onclick="google_it(40)">Exposed documents 1</a><br/>
     &#128269; <a href="#" onclick="google_it(41)">Exposed documents 2</a><br/>
@@ -525,7 +550,6 @@
     &#128269; <a href="#" onclick="google_it(68)">SQLi Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(69)">SSRF Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(70)">LFI Prone Parameters</a><br/>
-    &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(72)">File upload endpoints</a><br/>
     &#128269; <a href="#" onclick="google_it(73)">API Docs</a><br/>
