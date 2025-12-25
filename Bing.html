@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css">
     <style>
     body {
-      background-image: url(https://assets.faisalahmed.me/bg1.png);
-        color:#FFF;
+        background-color: #161616; /* Gris anthracite */
+        color: #FFF;
         font-size: 14pt;
-        font-family:"Merienda One";
+        font-family: "Merienda One";
         font-weight: bold;
         padding: 0px;
     }
@@ -155,65 +155,95 @@
         
     switch(type)
     {
+        case 0:
+            url += '';
+            break;
         case 1:
             url += '+intitle:\"index of\"';
             break;
         case 2:
-            url += '+filetype:xml+|+filetype:conf+|+filetype:cnf+|+filetype:reg+|+filetype:inf+|+filetype:rdp+|+filetype:cfg+|+filetype:config+|+filetype:txt+|+filetype:ora+|+filetype:ini';
+            url += '+(filetype:xml+|+filetype:conf+|+filetype:cnf+|+filetype:reg+|+filetype:inf+|+filetype:rdp+|+filetype:cfg+|+filetype:config+|+filetype:txt+|+filetype:ora+|+filetype:ini)';
             break;
         case 3:
-            url += '+filetype:sql+|+filetype:dbf+|+filetype:mdb';
+            url += '+(filetype:sql+|+filetype:dbf+|+filetype:mdb)';
             break;
         case 4:
             url += '+filetype:log';
             break;
         case 5:
-            url += '+filetype:bkf+|+filetype:bkp+|+filetype:bak+|+filetype:old+|+filetype:backup+|+filetype:~';
+            url += '+(filetype:bkf+|+filetype:bkp+|+filetype:bak+|+filetype:old+|+filetype:backup+|+filetype:~)';
             break;
         case 6:
-            url += '+instreamset:(url):signup+|+instreamset:(url):_cpanel+|+instreamset:(url):_cpanel/forgotpwd+|+instreamset:(url):register+|+intitle:Signup+|+instreamset:(url):admin+|+instreamset:(url):login+|+instreamset:(url):adminlogin+|+instreamset:(url):cplogin+|+instreamset:(url):weblogin+|+instreamset:(url):quicklogin+|+instreamset:(url):wp-admin+|+instreamset:(url):wp-login+|+instreamset:(url):portal+|+instreamset:(url):userportal+|+instreamset:(url):loginpanel+|+instreamset:(url):memberlogin+|+instreamset:(url):remote+|+instreamset:(url):dashboard+|+instreamset:(url):auth+|+instreamset:(url):exchange+|+instreamset:(url):ForgotPassword+|+instreamset:(url):test+|+instreamset:(url):signin+|+instreamset:(url):sso+|+intitle:admin+|+intitle:login+|+intitle:signin+|+intitle:\"sign in\"';
+            url += '+(instreamset:(url):signup+|+instreamset:(url):_cpanel+|+instreamset:(url):_cpanel/forgotpwd+|+instreamset:(url):register+|+intitle:Signup+|+instreamset:(url):admin+|+instreamset:(url):login+|+instreamset:(url):adminlogin+|+instreamset:(url):cplogin+|+instreamset:(url):weblogin+|+instreamset:(url):quicklogin+|+instreamset:(url):wp-admin+|+instreamset:(url):wp-login+|+instreamset:(url):portal+|+instreamset:(url):userportal+|+instreamset:(url):loginpanel+|+instreamset:(url):memberlogin+|+instreamset:(url):remote+|+instreamset:(url):dashboard+|+instreamset:(url):auth+|+instreamset:(url):exchange+|+instreamset:(url):ForgotPassword+|+instreamset:(url):test+|+instreamset:(url):signin+|+instreamset:(url):sso+|+instreamset:(title):admin+|+instreamset:(title)login+|+instreamset:(title)signin+|+instreamset:(title)\"sign in\"+|+instreamset:(url):secure)';
+            break;
+        case 66:
+            url += '+(inurl:signup+|+inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:register+|+intitle:Signup+|+inurl:admin+|+inurl:login+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:wp-login+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:ForgotPassword+|+inurl:test+|+inurl:signin+|+inurl:sso+|+intitle:admin+|+intitle:login+|+intitle:signin+|+intitle:\"sign in\"+|+inurl:secure)';
+            break;
+        case 666:
+            url += '+(instreamset:(url):signup+|+instreamset:(url):_cpanel+|+instreamset:(url):_cpanel/forgotpwd+|+instreamset:(url):register+|+intitle:Signup+|+instreamset:(url):admin+|+instreamset:(url):login+|+instreamset:(url):adminlogin+|+instreamset:(url):cplogin+|+instreamset:(url):weblogin+|+instreamset:(url):quicklogin+|+instreamset:(url):wp-admin+|+instreamset:(url):wp-login+|+instreamset:(url):portal+|+instreamset:(url):userportal+|+instreamset:(url):loginpanel+|+instreamset:(url):memberlogin+|+instreamset:(url):remote+|+instreamset:(url):dashboard+|+instreamset:(url):auth+|+instreamset:(url):exchange+|+instreamset:(url):ForgotPassword+|+instreamset:(url):test+|+instreamset:(url):signin+|+instreamset:(url):sso+|+instreamset:(url):secure)';
+            break;
+        case 6666:
+            url += '+(inurl:signup+|+inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:register+|+intitle:Signup+|+inurl:admin+|+inurl:login+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:wp-login+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:ForgotPassword+|+inurl:test+|+inurl:signin+|+inurl:sso+|+inurl:secure)';
+            break;
+        case 66666:
+            url += '+(instreamset:(url):_cpanel+|+instreamset:(url):_cpanel/forgotpwd+|+instreamset:(url):admin+|+instreamset:(url):adminlogin+|+instreamset:(url):cplogin+|+instreamset:(url):weblogin+|+instreamset:(url):quicklogin+|+instreamset:(url):wp-admin+|+instreamset:(url):portal+|+instreamset:(url):userportal+|+instreamset:(url):loginpanel+|+instreamset:(url):memberlogin+|+instreamset:(url):remote+|+instreamset:(url):dashboard+|+instreamset:(url):auth+|+instreamset:(url):exchange+|+instreamset:(url):sso)+|+instreamset:(url):secure+|+instreamset:(url):/admin.aspx';
+            break;
+        case 666666:
+            url += '+(inurl:_cpanel+|+inurl:_cpanel/forgotpwd+|+inurl:admin+|+inurl:adminlogin+|+inurl:cplogin+|+inurl:weblogin+|+inurl:quicklogin+|+inurl:wp-admin+|+inurl:portal+|+inurl:userportal+|+inurl:loginpanel+|+inurl:memberlogin+|+inurl:remote+|+inurl:dashboard+|+inurl:auth+|+inurl:exchange+|+inurl:sso+|+inurl:secure+|+inurl:/admin.aspx)';
             break;
         case 7:
-            url += '+instreamset:(body):"sql+syntax+near"+|+instreamset:(body):"syntax+error+has+occurred"+|+instreamset:(body):"incorrect+syntax+near"+|+instreamset:(body):"unexpected+end+of+SQL+command"+|+instreamset:(body):"Warning:+mysql_connect()"+|+instreamset:(body):"Warning:+mysql_query()"+|+instreamset:(body):"Warning:+pg_connect()"';
+            url += '+(instreamset:(body):"sql+syntax+near"+|+instreamset:(body):"syntax+error+has+occurred"+|+instreamset:(body):"incorrect+syntax+near"+|+instreamset:(body):"unexpected+end+of+SQL+command"+|+instreamset:(body):"Warning:+mysql_connect()"+|+instreamset:(body):"Warning:+mysql_query()"+|+instreamset:(body):"Warning:+pg_connect()")';
+            break;
+        case 77:
+            url += '+(inbody:"sqlsyntaxnear"+|+inbody:"syntaxerrorhasoccurred"+|+inbody:"incorrectsyntaxnear"+|+inbody:"unexpectedendofSQLcommand"+|+inbody:"Warning:mysql_connect()"+|+inbody:"Warning:mysql_query()"+|+inbody:"Warning:pg_connect()")';
             break;
         case 8:
-            url += '+filetype:doc+|+filetype:docx+|+filetype:odt+|+filetype:pdf+|+filetype:rtf+|+filetype:sxw+|+filetype:psw+|+filetype:ppt+|+filetype:pptx+|+filetype:pps+|+filetype:csv|+filetype:swf';
-            break;
-        case 9:
-            url += '+filetype:php+intitle:phpinfo+\"published+by+the+PHP+Group\"+|+intitle:phpmyadmin+|+instreamset:(url):phpmyadmin';
+            url += '+(filetype:doc+|+filetype:docx+|+filetype:odt+|+filetype:pdf+|+filetype:rtf+|+filetype:sxw+|+filetype:psw+|+filetype:ppt+|+filetype:pptx+|+filetype:pps+|+filetype:csv|+filetype:swf)';
             break;
         case 10:
-            url += '+instreamset:(url):wp-+|+instreamset:(url):wp-content+|+instreamset:(url):plugins+|+instreamset:(url):uploads+|+instreamset:(url):themes+|+instreamset:(url):download';
+            url += '+(instreamset:(url):wp-+|+instreamset:(url):wp-content+|+instreamset:(url):plugins+|+instreamset:(url):uploads+|+instreamset:(url):themes+|+instreamset:(url):download)';
+            break;
+        case 100:
+            url += '+(inurl:wp-+|+inurl:wp-content+|+inurl:plugins+|+inurl:uploads+|+inurl:themes+|+inurl:download)';
             break;
         case 11:
-            url += '+instreamset:(url):shell+|+instreamset:(url):backdoor+|+instreamset:(url):wso+|+instreamset:(url):cmd+|+shadow+|+passwd+|+boot.ini+|+instreamset:(url):backdoor';
+            url += '+(instreamset:(url):shell+|+instreamset:(url):backdoor+|+instreamset:(url):wso+|+instreamset:(url):cmd+|+shadow+|+passwd+|+boot.ini+|+instreamset:(url):backdoor)';
+            break;
+        case 111:
+            url += '+(inurl:shell+|+inurl:backdoor+|+inurl:wso+|+inurl:cmd+|+shadow+|+passwd+|+boot.ini+|+inurl:backdoor)';
             break;
         case 12:
-            url += '+instreamset:(url):readme+|+instreamset:(url):license+|+instreamset:(url):install+|+instreamset:(url):setup+|+instreamset:(url):config';
+            url += '+(instreamset:(url):readme+|+instreamset:(url):license+|+instreamset:(url):install+|+instreamset:(url):setup+|+instreamset:(url):config)';
+            break;
+        case 122:
+            url += '+(inurl:readme+|+inurl:license+|+inurl:install+|+inurl:setup+|+inurl:config)';
             break;
         case 13:
-            url += '+instreamset:(url):redir+|+instreamset:(url):url+|+instreamset:(url):src=http+|+instreamset:(url):r=http+|+instreamset:(url):return+|+instreamset:(url):return_url+|+instreamset:(url):rUrl+|+instreamset:(url):cancelUrl+|+instreamset:(url):redirect+|+instreamset:(url):follow+|+instreamset:(url):goto+|+instreamset:(url):returnTo+|+instreamset:(url):returnUrl+|+instreamset:(url):r_url+|+instreamset:(url):history+|+instreamset:(url):goback+|+instreamset:(url):redirectTo+|+instreamset:(url):redirectUrl+|+instreamset:(url):redirUrl';
+            url += '+(instreamset:(url):redir+|+instreamset:(url):url+|+instreamset:(url):src=http+|+instreamset:(url):r=http+|+instreamset:(url):return+|+instreamset:(url):return_url+|+instreamset:(url):rUrl+|+instreamset:(url):cancelUrl+|+instreamset:(url):redirect+|+instreamset:(url):follow+|+instreamset:(url):goto+|+instreamset:(url):returnTo+|+instreamset:(url):returnUrl+|+instreamset:(url):r_url+|+instreamset:(url):history+|+instreamset:(url):goback+|+instreamset:(url):redirectTo+|+instreamset:(url):redirectUrl+|+instreamset:(url):redirUrl)';
+            break;
+        case 133:
+            url += '+(inurl:redir+|+inurl:url+|+inurl:src=http+|+inurl:r=http+|+inurl:return+|+inurl:return_url+|+inurl:rUrl+|+inurl:cancelUrl+|+inurl:redirect+|+inurl:follow+|+inurl:goto+|+inurl:returnTo+|+inurl:returnUrl+|+inurl:r_url+|+inurl:history+|+inurl:goback+|+inurl:redirectTo+|+inurl:redirectUrl+|+inurl:redirUrl)';
             break;
         case 14:
-            url += '+filetype:action+|+filetype:struts+|+filetype:do';
+            url += '+(filetype:action+|+filetype:struts+|+filetype:do)';
             break;
         case 15:
-            url = 'https://www.bing.com/search?q=site:justpaste.it+|+site:heypasteit.com+|+site:pastebin.com+|+site:jsfiddle.net+\"' + domain_sans_tld + '\"';
+            url = 'https://www.bing.com/search?q=(site:justpaste.it+|+site:heypasteit.com+|+site:pastebin.com+|+site:jsfiddle.net)+\"' + domain_sans_tld + '\"';
             break;
         case 16:
             url = 'https://www.bing.com/search?q=site:linkedin.com+employees+' + site;
             break;
         case 17:
-            url += '+instreamset:(url):"/phpinfo.php"+|+instreamset:(url):".htaccess"+|+instreamset:(url):"/.git"+' + site + '+-github';
+            url += '+(instreamset:(url):"/phpinfo.php"+|+instreamset:(url):".htaccess"+|+instreamset:(url):"/.git)"+' + site + '+-github';
+            break;
+        case 177:
+            url += '+(inurl:"/phpinfo.php"+|+inurl:".htaccess"+|+inurl:"/.git)"+' + site + '+-github';
             break;
         case 18:
             url = 'https://www.bing.com/search?q=site:*.' + site;
             break;
         case 19:
             url = 'https://www.bing.com/search?q=site:*.*.' + site;
-            break;
-        case 20:
-            url += '+instreamset:(url):wp-content+|+instreamset:(url):wp-includes';
             break;
         case 21:
             url =  'https://github.com/search?q="*.' + site +'"&type=host';
@@ -226,6 +256,9 @@
             break; 
         case 24:
             url = 'https://www.bing.com/search?q=+instreamset:(url):' + site + '+filetype:swf';
+            break;
+        case 244:
+            url = 'https://www.bing.com/search?q=+inurl:' + site + '+filetype:swf';
             break;
         case 25:
             url = 'https://yandex.com/search/?text=site:' + site + '%20mime:swf';
@@ -272,71 +305,104 @@
         case 39:
             url =  'https://www.bing.com/search?q=instreamset:(url):"/.git"+' + site + '+-github';
             break;
+        case 399:
+            url =  'https://www.bing.com/search?q=inurl:"/.git"+' + site + '+-github';
+            break;
         case 40:
-            url +=  '+filetype:doc+|+filetype:docx+|+filetype:odt+|+filetype:pdf+|+filetype:rtf+|+filetype:sxw+|+filetype:psw+|+filetype:ppt+|+filetype:pptx+|+filetype:pps+|+filetype:csv+|+filetype:doc+|+filetype:docx+|+filetype:xls+|+filetype:xlsx+|+filetype:ppt+|+filetype:pptx+|+filetype:mdb+|+filetype:pdf+|+filetype:sql+|+filetype:txt+|+filetype:rtf+|+filetype:csv+|+filetype:xml+|+filetype:conf+|+filetype:dat+|+filetype:ini+|+filetype:log';
+            url +=  '+(filetype:doc+|+filetype:docx+|+filetype:odt+|+filetype:pdf+|+filetype:rtf+|+filetype:sxw+|+filetype:psw+|+filetype:ppt+|+filetype:pptx+|+filetype:pps+|+filetype:csv+|+filetype:doc+|+filetype:docx+|+filetype:xls+|+filetype:xlsx+|+filetype:ppt+|+filetype:pptx+|+filetype:mdb+|+filetype:pdf+|+filetype:sql+|+filetype:txt+|+filetype:rtf+|+filetype:csv+|+filetype:xml+|+filetype:conf+|+filetype:dat+|+filetype:ini+|+filetype:log)';
             break;
         case 41:
-            url +=  '+index%20of:id_rsa%20id_rsa.pub+|+filetype:py+|+filetype:html+|+filetype:sh+|+filetype:odt+|+filetype:key+|+filetype:sign+|+filetype:md+|+filetype:old+|+filetype:bin+|+filetype:cer+|+filetype:crt+|+filetype:pfx+|+filetype:crl+|+filetype:crs+|+filetype:der';
+            url +=  '+(index%20of:id_rsa%20id_rsa.pub+|+filetype:py+|+filetype:html+|+filetype:sh+|+filetype:odt+|+filetype:key+|+filetype:sign+|+filetype:md+|+filetype:old+|+filetype:bin+|+filetype:cer+|+filetype:crt+|+filetype:pfx+|+filetype:crl+|+filetype:crs+|+filetype:der)';
             break;
         case 42:
-            url =  'https://www.bing.com/search?q=instreamset:(url):' + domain_sans_tld + '+\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+|+instreamset:(body):\"internal+use+only\"+OR+instreamset:(body):\"not+for+public+release\"+filetype:doc+|+intitle:confidential+OR+intitle:restricted+instreamset:(body):salary+filetype:pdf+|+instreamset:(body):\"client+data\"+OR+instreamset:(body):\"customer+details\"+intitle:confidential+filetype:docx+|+intitle:classified+OR+intitle:\"top+secret\"+instreamset:(body):password+filetype:pdf+|+instreamset:(body):confidential+intitle:filetype:xls+OR+filetype:xlsx+OR+filetype:csv"';
+            url =  'https://www.bing.com/search?q=instreamset:(url):' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+|+instreamset:(body):\"internal+use+only\"+OR+instreamset:(body):\"not+for+public+release\"+filetype:doc+|+intitle:confidential+OR+intitle:restricted+instreamset:(body):salary+filetype:pdf+|+instreamset:(body):\"client+data\"+OR+instreamset:(body):\"customer+details\"+intitle:confidential+filetype:docx+|+intitle:classified+OR+intitle:\"top+secret\"+instreamset:(body):password+filetype:pdf+|+instreamset:(body):confidential+intitle:filetype:xls+OR+filetype:xlsx+OR+filetype:csv)';
             break;
-        case 43:
-            url +=  '+\"PHP+Parse+error\"+|+\"PHP+Warning\"+|+\"PHP+Error\"';
+        case 422:
+            url =  'https://www.bing.com/search?q=inurl:' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+filetype:xls+OR+filetype:csv+OR+filetype:doc+OR+filetype:pdf+|+inbody:\"internal+use+only\"+OR+inbody:\"not+for+public+release\"+filetype:doc+|+intitle:confidential+OR+intitle:restricted+inbody:salary+filetype:pdf+|+inbody:\"client+data\"+OR+inbody:\"customer+details\"+intitle:confidential+filetype:docx+|+intitle:classified+OR+intitle:\"top+secret\"+inbody:password+filetype:pdf+|+inbody:confidential+intitle:filetype:xls+OR+filetype:xlsx+OR+filetype:csv)';
             break;
         case 44:
-            url +=  '+instreamset:(url):wp-content+|+instreamset:(url):wp-includes';
+            url +=  '+(instreamset:(url):wp-content+|+instreamset:(url):wp-includes)';
+            break;
+        case 444:
+            url +=  '+(inurl:wp-content+|+inurl:wp-includes)';
             break;
         case 45:
-            url =  'https://www.bing.com/search?q=site:trello.com+|+site:*.atlassian.net+\"' + domain_sans_tld + '\"';
+            url =  'https://www.bing.com/search?q=(site:trello.com+|+site:*.atlassian.net)+\"' + domain_sans_tld + '\"';
             break;
         case 46:
-            url =  'https://www.bing.com/search?q=\"' + domain_sans_tld + '\"+intitle:%22index%20of%22%20%22parent%20directory%22+|+intitle:%22index%20of%22%20%22DCIM%22+|+intitle:%22index%20of%22%20%22ftp%22+|+intitle:%22index%20of%22%20%22backup%22+|+intitle:%22index%20of%22%20%22mail%22+|+intitle:%22index%20of%22%20%22password%22+|+intitle:%22index%20of%22%20%22pub%22+|+intitle:%22index%20of%22%20%22.git%22';
+            url =  'https://www.bing.com/search?q=\"' + domain_sans_tld + '\"+(intitle:%22index%20of%22%20%22parent%20directory%22+|+intitle:%22index%20of%22%20%22DCIM%22+|+intitle:%22index%20of%22%20%22ftp%22+|+intitle:%22index%20of%22%20%22backup%22+|+intitle:%22index%20of%22%20%22mail%22+|+intitle:%22index%20of%22%20%22password%22+|+intitle:%22index%20of%22%20%22pub%22+|+intitle:%22index%20of%22%20%22.git%22)';
             break;
         case 47:
-            url =  'https://www.bing.com/search?q=site:github.com+|+site:cryptome.org+|+site:gitlab.com+|+site:bitbucket.org+\"' + domain_sans_tld + '\"';
+            url =  'https://www.bing.com/search?q=site:(github.com+|+site:cryptome.org+|+site:gitlab.com+|+site:bitbucket.org)+\"' + domain_sans_tld + '\"';
             break;
         case 48:
-            url =  'https://www.bing.com/search?q=site:.s3.amazonaws.com+|+site:.onedrive.live.com+|+site:.dl.dropbox.com+|site:.drive.google.com+|+site:storage.googleapis.com+|+site:amazonaws.com+\"' + domain_sans_tld + '\"';
+            url =  'https://www.bing.com/search?q=(site:.s3.amazonaws.com+|+site:.onedrive.live.com+|+site:.dl.dropbox.com+|site:.drive.google.com+|+site:storage.googleapis.com+|+site:amazonaws.com)+\"' + domain_sans_tld + '\"';
             break;
         case 49:
             url =  'https://www.bing.com/search?q=intitle:traefik+instreamset:(url):8080/dashboard+\"' + domain_sans_tld + '\"';
+            break;
+        case 499:
+            url =  'https://www.bing.com/search?q=intitle:traefik+inurl:8080/dashboard+\"' + domain_sans_tld + '\"';
             break;
         case 50:
             url =  'https://www.bing.com/search?q=intitle:\"Dashboard+[Jenkins]\"+\"' + domain_sans_tld + '\"';
             break;
         case 51:
-            url =  'https://www.bing.com/search?q=site:sharecode.io+|+site:controlc.com+|+site:codepad.co+|site:ideone.com+|+site:codebeautify.org+|+site:jsdelivr.com+|+site:codeshare.io+|+site:codepen.io+|+site:repl.it+|+site:jsfiddle.net+\"' + domain_sans_tld + '\"';
+            url =  'https://www.bing.com/search?q=(site:sharecode.io+|+site:controlc.com+|+site:codepad.co+|site:ideone.com+|+site:codebeautify.org+|+site:jsdelivr.com+|+site:codeshare.io+|+site:codepen.io+|+site:repl.it+|+site:jsfiddle.net)+\"' + domain_sans_tld + '\"';
             break;
         case 52:
-            url =  'https://www.bing.com/search?q=site:gitter.im+|+site:papaly.com+|+site:productforums.google.com+|+site:coggle.it+|+site:replt.it+|+site:ycombinator.com+|+site:libraries.io+|+site:npm.runkit.com+|+site:npmjs.com+|+site:scribd.com+\"' + domain_sans_tld + '\"';
+            url =  'https://www.bing.com/search?q=(site:gitter.im+|+site:papaly.com+|+site:productforums.google.com+|+site:coggle.it+|+site:replt.it+|+site:ycombinator.com+|+site:libraries.io+|+site:npm.runkit.com+|+site:npmjs.com+|+site:scribd.com)+\"' + domain_sans_tld + '\"';
             break;
         case 53:
             url =  'https://www.bing.com/search?q=site:stackoverflow.com+\"' + site + '\"';
             break;
         case 54:
-            url +=  '+filetype:php+|+filetype:aspx+|+filetype:asp+|+filetype:jsp+|+filetype:jspx+|+filetype:do+|+filetype:action';
+            url +=  '+(filetype:php+|+filetype:aspx+|+filetype:asp+|+filetype:jsp+|+filetype:jspx+|+filetype:do+|+filetype:action)';
             break;
         case 55:
-            url +=  '+instreamset:(body):"Swagger+UI"+|+instreamset:(body):swagger+filetype:log+|+intitle:\"Swagger+UI+-+\"+\"Show/Hide\"+|+intitle:"Swagger+UI"+|+instreamset:(url):"swagger"+|+instreamset:(url):\"swagger-ui/index.html\"+|+instreamset:(url):/swagger/index.html+|+instreamset:(url):apidocs+|+instreamset:(url):\"api-docs\"+|+instreamset:(url):swagger+|+instreamset:(url):api-explorer';
+            url +=  '+(instreamset:(body):"Swagger+UI"+|+instreamset:(body):swagger+filetype:log+|+instreamset:(title):\"Swagger+UI+-+\"+\"Show/Hide\"+|+intitle:"Swagger+UI"+|+instreamset:(url):"swagger"+|+instreamset:(url):\"swagger-ui/index.html\"+|+instreamset:(url):/swagger/index.html+|+instreamset:(url):apidocs+|+instreamset:(url):\"api-docs\"+|+instreamset:(url):swagger+|+instreamset:(url):api-explorer)';
+            break;
+        case 555:
+            url +=  '+(inbody:"Swagger+UI"+|+inbody:swagger+filetype:log+|+intitle:\"Swagger+UI+-+\"+\"Show/Hide\"+|+intitle:"Swagger+UI"+|+inurl:"swagger"+|+inurl:\"swagger-ui/index.html\"+|+inurl:/swagger/index.html+|+inurl:apidocs+|+inurl:\"api-docs\"+|+inurl:swagger+|+inurl:api-explorer)';
+            break;
+        case 5555:
+            url +=  '+instreamset:(title):\"/zircote/swagger-php\"';
+            break;
+        case 55555:
+            url +=  '+intitle:\"/zircote/swagger-php\"';
             break;
         case 56:
-            url +=  '+filetype:log+|+filetype:txt+|+filetype:conf+|+filetype:cnf+|+filetype:ini+|+filetype:env+|+filetype:sh+|+filetype:bak+|+filetype:backup+|+filetype:swp+|+filetype:old+|+filetype:~+|+filetype:git+|+filetype:svn+|+filetype:htpasswd+|+filetype:htaccess';
+            url +=  '+(filetype:log+|+filetype:txt+|+filetype:conf+|+filetype:cnf+|+filetype:ini+|+filetype:env+|+filetype:sh+|+filetype:bak+|+filetype:backup+|+filetype:swp+|+filetype:old+|+filetype:~+|+filetype:git+|+filetype:svn+|+filetype:htpasswd+|+filetype:htaccess+|+filetype:json)';
             break;
         case 57:
-            url +=  '+instreamset:(url):config.inc.php+|+instreamset:(url):config.php+|+instreamset:(url):configuration.php+|+instreamset:(url):credentials+|+instreamset:(url):credentials.xml+|+instreamset:(url):database+|+instreamset:(url):.env+|+instreamset:(url):id_dsa+|+instreamset:(url):id_rsa+|+instreamset:(url):LocalSettings.php+|+instreamset:(url):passwd+|+instreamset:(url):secrets.yml+|+instreamset:(url):secret_token.rb+|+instreamset:(url):settings.py+|+instreamset:(url):shadow+|+instreamset:(url):.sqlite+|+instreamset:(url):wp-config.php';
+            url +=  '+(instreamset:(url):config.inc.php+|+instreamset:(url):config.php+|+instreamset:(url):configuration.php+|+instreamset:(url):credentials+|+instreamset:(url):credentials.xml+|+instreamset:(url):database+|+instreamset:(url):.env+|+instreamset:(url):id_dsa+|+instreamset:(url):id_rsa+|+instreamset:(url):LocalSettings.php+|+instreamset:(url):passwd+|+instreamset:(url):secrets.yml+|+instreamset:(url):secret_token.rb+|+instreamset:(url):settings.py+|+instreamset:(url):shadow+|+instreamset:(url):.sqlite+|+instreamset:(url):wp-config.php|+instreamset:(url):/conf)';
+            break;
+        case 577:
+            url +=  '+(inurl:config.inc.php+|+inurl:config.php+|+inurl:configuration.php+|+inurl:credentials+|+inurl:credentials.xml+|+inurl:database+|+inurl:.env+|+inurl:id_dsa+|+inurl:id_rsa+|+inurl:LocalSettings.php+|+inurl:passwd+|+inurl:secrets.yml+|+inurl:secret_token.rb+|+inurl:settings.py+|+inurl:shadow+|+inurl:.sqlite+|+inurl:wp-config.php|+inurl:/conf)';
             break;
         case 58:
-            url +=  '+instreamset:(body):"CEO"+OR+instreamset:(body):"CFO"+OR+instreamset:(body):"COO"+intitle:"email"+filetype:txt+|+instreamset:(body):\"marketing+strategy\"+OR+instreamset:(body):\"business+development\"+intitle:"confidential"+filetype:pdf+|+intitle:\"board+meeting\"+OR+intitle:\"shareholder+report\"+instreamset:(body):"draft"+filetype:pdf+|+intitle:\"corporate+secrets\"+OR+intitle:\"proprietary+information\"+instreamset:(body):"email"+filetype:docx+|+intitle:\"internal+memo\"+OR+intitle:\"confidential+communication\"+instreamset:(body):"HR"+filetype:doc';
+            url +=  '+(instreamset:(body):"CEO"+OR+instreamset:(body):"CFO"+OR+instreamset:(body):"COO"+instreamset:(title):"email"+filetype:txt+|+instreamset:(body):\"marketing+strategy\"+OR+instreamset:(body):\"business+development\"+instreamset:(title):"confidential"+filetype:pdf+|+instreamset:(title):\"board+meeting\"+OR+instreamset:(title):\"shareholder+report\"+instreamset:(body):"draft"+filetype:pdf+|+instreamset:(title):\"corporate+secrets\"+OR+instreamset:(title):\"proprietary+information\"+instreamset:(body):"email"+filetype:docx+|+instreamset:(title):\"internal+memo\"+OR+instreamset:(title):\"confidential+communication\"+instreamset:(body):"HR"+filetype:doc)';
+            break;
+        case 588:
+            url +=  '+(inbody:"CEO"+OR+inbody:"CFO"+OR+inbody:"COO"+intitle:"email"+filetype:txt+|+inbody:\"marketing+strategy\"+OR+inbody:\"business+development\"+intitle:"confidential"+filetype:pdf+|+intitle:\"board+meeting\"+OR+intitle:\"shareholder+report\"+inbody:"draft"+filetype:pdf+|+intitle:\"corporate+secrets\"+OR+intitle:\"proprietary+information\"+inbody:"email"+filetype:docx+|+intitle:\"internal+memo\"+OR+intitle:\"confidential+communication\"+inbody:"HR"+filetype:doc)';
             break;
         case 59:
-            url +=  '+instreamset:(body):\"financial+report\"+intitle:\"' + domain_sans_tld + '\"+OR+intitle:"quarterly"+filetype:pdf+|+instreamset:(body):\"investment+portfolio\"+OR+instreamset:(body):\"bank+statement\"+intitle:"confidential"+filetype:pdf+|+instreamset:(body):\"tax+return\"+OR+instreamset:(body):\"audit+report\"+intitle:"restricted"+filetype:pdf+|+intitle:\"budget+plan\"+OR+intitle:\"financial+forecast\"+instreamset:(body):"confidential"+filetype:docx+|+intitle:"invoice"+OR+intitle:\"billing+statement\"+instreamset:(body):"confidential"+filetype:xls';
+            url +=  '+(instreamset:(body):\"financial+report\"+instreamset:(title):\"' + domain_sans_tld + '\"+OR+instreamset:(title):"quarterly"+filetype:pdf+|+instreamset:(body):\"investment+portfolio\"+OR+instreamset:(body):\"bank+statement\"+instreamset:(title):"confidential"+filetype:pdf+|+instreamset:(body):\"tax+return\"+OR+instreamset:(body):\"audit+report\"+instreamset:(title):"restricted"+filetype:pdf+|+instreamset:(title):\"budget+plan\"+OR+instreamset:(title):\"financial+forecast\"+instreamset:(body):"confidential"+filetype:docx+|+instreamset:(title):"invoice"+OR+instreamset:(title):\"billing+statement\"+instreamset:(body):"confidential"+filetype:xls)';
+            break;
+        case 599:
+            url +=  '+(inbody:\"financial+report\"+intitle:\"' + domain_sans_tld + '\"+OR+intitle:"quarterly"+filetype:pdf+|+inbody:\"investment+portfolio\"+OR+inbody:\"bank+statement\"+intitle:"confidential"+filetype:pdf+|+inbody:\"tax+return\"+OR+inbody:\"audit+report\"+intitle:"restricted"+filetype:pdf+|+intitle:\"budget+plan\"+OR+intitle:\"financial+forecast\"+inbody:"confidential"+filetype:docx+|+intitle:"invoice"+OR+intitle:\"billing+statement\"+inbody:"confidential"+filetype:xls)';
             break;
         case 60:
-            url +=  '+instreamset:(body):\"employee+directory\"+OR+instreamset:(body):\"HR+records\"+intitle:"confidential"+filetype:xlsx+|+instreamset:(body):"resume"+OR+instreamset:(body):"CV"+OR+instreamset:(body):\"job+application\"+filetype:pdf+|+intitle:\"employee+contract\"+OR+intitle:\"confidential+employment+agreement\"+filetype:docx+|+intitle:\"performance+review\"+OR+intitle:\"disciplinary+action\"+instreamset:(body):"confidential"+filetype:pdf+|+intitle:\"personnel+file\"+OR+intitle:\"staff+records\"+instreamset:(body):"confidential"+filetype:doc';
+            url +=  '+((instreamset:(body):\"employee+directory\"+OR+instreamset:(body):\"HR+records\"+instreamset:(title):"confidential"+filetype:xlsx+|+instreamset:(body):"resume"+OR+instreamset:(body):"CV"+OR+instreamset:(body):\"job+application\"+filetype:pdf+|+instreamset:(title):\"employee+contract\"+OR+instreamset:(title):\"confidential+employment+agreement\"+filetype:docx+|+instreamset:(title):\"performance+review\"+OR+instreamset:(title):\"disciplinary+action\"+instreamset:(body):"confidential"+filetype:pdf+|+instreamset:(title):\"personnel+file\"+OR+instreamset:(title):\"staff+records\"+instreamset:(body):"confidential"+filetype:doc)';
+            break;
+        case 600:
+            url +=  '+(inbody:\"employee+directory\"+OR+inbody:\"HR+records\"+intitle:"confidential"+filetype:xlsx+|+inbody:"resume"+OR+inbody:"CV"+OR+inbody:\"job+application\"+filetype:pdf+|+intitle:\"employee+contract\"+OR+intitle:\"confidential+employment+agreement\"+filetype:docx+|+intitle:\"performance+review\"+OR+intitle:\"disciplinary+action\"+inbody:"confidential"+filetype:pdf+|+intitle:\"personnel+file\"+OR+intitle:\"staff+records\"+inbody:"confidential"+filetype:doc)';
             break;
         case 61:
-            url +=  '+instreamset:(body):\"SCADA+system\"+OR+instreamset:(body):\"power+grid\"+intitle:\"critical+infrastructure\"+filetype:pdf+|+instreamset:(body):\"security+plan\"+OR+instreamset:(body):\"network+layout\"+intitle:"confidential"+filetype:pdf+|+intitle:\"airport+security\"+OR+intitle:\"seaport+layout\"+instreamset:(body):\"restricted+access\"+filetype:pdf+|+intitle:\"building+plans\"+OR+intitle:\"facility+layout\"+instreamset:(body):"restricted"+filetype:docx+|+intitle:\"server+configuration\"+OR+intitle:\"database+schema\"+instreamset:(body):"confidential"+filetype:txt';
+            url +=  '+(instreamset:(body):\"SCADA+system\"+OR+instreamset:(body):\"power+grid\"+instreamset:(title):\"critical+infrastructure\"+filetype:pdf+|+instreamset:(body):\"security+plan\"+OR+instreamset:(body):\"network+layout\"+instreamset:(title):"confidential"+filetype:pdf+|+instreamset:(title):\"airport+security\"+OR+instreamset:(title):\"seaport+layout\"+instreamset:(body):\"restricted+access\"+filetype:pdf+|+instreamset:(title):\"building+plans\"+OR+instreamset:(title):\"facility+layout\"+instreamset:(body):"restricted"+filetype:docx+|+instreamset:(title):\"server+configuration\"+OR+instreamset:(title):\"database+schema\"+instreamset:(body):"confidential"+filetype:txt)';
+            break;
+        case 611:
+            url +=  '+(inbody:\"SCADA+system\"+OR+inbody:\"power+grid\"+intitle:\"critical+infrastructure\"+filetype:pdf+|+inbody:\"security+plan\"+OR+inbody:\"network+layout\"+intitle:"confidential"+filetype:pdf+|+intitle:\"airport+security\"+OR+intitle:\"seaport+layout\"+inbody:\"restricted+access\"+filetype:pdf+|+intitle:\"building+plans\"+OR+intitle:\"facility+layout\"+inbody:"restricted"+filetype:docx+|+intitle:\"server+configuration\"+OR+intitle:\"database+schema\"+inbody:"confidential"+filetype:txt)';
             break;
         case 62:
             url +=  '+filetype:php+instreamset:(url):?';
@@ -350,90 +416,130 @@
     
     <div style="padding-top: 20px;height: 100px; display: flex;justify-content: center;font-size: 35px;color: #0077ff;"><b>Target Domain:</b>
     
-    <input style="outline: none;font-weight: bold" id="target" name="target" placeholder="site.com" autofocus="" type="text"><br/></div>
+        <input style="outline: none;font-weight: bold" id="target" name="target" placeholder="site.com" autofocus="" type="text"><br/></div>
+        
+<div style="padding-top: 1px;height: 20px; display: flex;justify-content: center;font-size: 25px">&#128269; <a href="#" onclick="google_it(0)">Requête de base <span style="color: rgb(255, 166, 0);">(site:)</span></a></div>
+
+        <div class="row">
+          <div class="column"><div style="text-align: right;">
+            <div style="display: inline-block; text-align: left;">
     
-    <div class="row">
-      <div class="column"><div style="text-align: right;">
-        <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(1)">Directory listing vulnerabilities (index of)</a><br/>  
-    &#128269; <a href="#" onclick="google_it(2)">Exposed Configuration files</a><br/>
-    &#128269; <a href="#" onclick="google_it(3)">Exposed Database files</a><br/> 
-    &#128269; <a href="#" onclick="google_it(10)">Find WordPress</a><br/>	
-    &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
-    &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
-    &#128269; <a href="#" onclick="google_it(6)">Login / Register / Admin pages</a><br/>
-    &#128269; <a href="#" onclick="google_it(7)">SQL errors</a><br/>
-    &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
-    &#128269; <a href="#" onclick="google_it(9)">phpinfo(), phpmyadmin</a><br/>
-    &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors</a><br/>
-    &#128269; <a href="#" onclick="google_it(12)">Install / Setup files</a><br/>
-    &#128269; <a href="#" onclick="google_it(13)">Open Redirects</a><br/>
-    &#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
-    &#128269; <a href="#" onclick="google_it(15)">Pastebin-like sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
-    &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files</a><br/>
-    &#128269; <a href="#" onclick="google_it(54)">Files php, aspx</a><br/>
-    &#128269; <a href="#" onclick="google_it(55)">Swagger</a><br/>
-    &#128269; <a href="#" onclick="google_it(60)">Employee Information</a><br/>
+                <div style="font-weight: bold; color: rgb(132, 132, 132); font-size: 30px;; margin-bottom: 1mm;">
+                    <span style="text-decoration: none;">🕵️</span>
+                    <span style="text-decoration: underline;">PII</span>
+                    
+                </div>
+        &#128269; <a href="#" onclick="google_it(57)">Juicy Filename <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(577)">Juicy Filename <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(56)">Juicy Extensions</a><br/>
+        &#128269; <a href="#" onclick="google_it(61)">Sensitive Infrastructure Data <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(611)">Sensitive Infrastructure Data <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(3)">Exposed Database files</a><br/> 
+        &#128269; <a href="#" onclick="google_it(17)">.htaccess sensitive files <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(177)">.htaccess sensitive files <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(5)">Backup and old files</a><br/>
+        &#128269; <a href="#" onclick="google_it(4)">Exposed log files</a><br/> 
+        &#128269; <a href="#" onclick="google_it(42)">Confidential documents <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(422)">Confidential documents <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(8)">Publicly exposed documents</a><br/>
+        &#128269; <a href="#" onclick="google_it(40)">Exposed documents 1</a><br/>
+        &#128269; <a href="#" onclick="google_it(41)">Exposed documents 2</a><br/>
+        &#128269; <a href="#" onclick="google_it(59)">Financial Records <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(599)">Financial Records <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(58)">Corporate Communications <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(588)">Corporate Communications <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(2)">Exposed Configuration files</a><br/>
+        &#128269; <a href="#" onclick="google_it(1)">Directory listing vulnerabilities (index of)</a><br/>
+        &#128269; <a href="#" onclick="google_it(39)">.git folders <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(399)">.git folders <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(12)">Install / Setup files <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(122)">Install / Setup files <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(60)">Employee Information <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(600)">Employee Information <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(47)">GitLab / GitHub / Bitbucket</a><br/>
+        &#128269; <a href="#" onclick="google_it(21)">Search in Github</a><br/>
+        &#128269; <a href="#" onclick="google_it(48)">Cloud buckets S3 / GCP</a><br/>
+        &#128269; <a href="#" onclick="google_it(51)">Code share sites</a><br/>
+        &#128269; <a href="#" onclick="google_it(15)">Pastebin-like sites</a><br/>
+        &#128269; <a href="#" onclick="google_it(53)">Stackoverflow</a><br/>
+        &#128269; <a href="#" onclick="google_it(52)">Other 3rd parties sites</a><br/>
     
-
-    </div></div></div>
-    <div class="column"><div style="text-align: center;">
-        <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(42)">Confidential documents</a><br/>
-    &#128269; <a href="#" onclick="google_it(43)">PHP errors</a><br/>
-    &#128269; <a href="#" onclick="google_it(45)">Project management sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(47)">GitLab / GitHub / Bitbucket</a><br/>
-    &#128269; <a href="#" onclick="google_it(49)">Traefik</a><br/>
-    &#128269; <a href="#" onclick="google_it(51)">Code share sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(53)">Stackoverflow</a><br/>
-    &#128269; <a href="#" onclick="google_it(46)">Path traversal</a><br/>
-    &#128269; <a href="#" onclick="google_it(48)">Cloud buckets S3 / GCP</a><br/>
-    &#128269; <a href="#" onclick="google_it(50)">Jenkins</a><br/>
-    &#128269; <a href="#" onclick="google_it(52)">Other 3rd parties sites</a><br/>
-    &#128269; <a href="#" onclick="google_it(40)">Exposed documents 1</a><br/>
-    &#128269; <a href="#" onclick="google_it(41)">Exposed documents 2</a><br/>
-    &#128269; <a href="#" onclick="google_it(44)">Wordpress files</a><br/>
-    &#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
-    &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
-    &#128269; <a href="#" onclick="google_it(39)">.git folders</a><br/>
-    &#128269; <a href="#" onclick="google_it(56)">Juicy Extensions</a><br/>
-    &#128269; <a href="#" onclick="google_it(59)">Financial Records</a><br/>
-    &#128269; <a href="#" onclick="google_it(61)">Sensitive Infrastructure Data</a><br/>
-
-    </div></div></div>
-    <div class="column"><div style="text-align: left;">
-        <div style="display: inline-block; text-align: left;">
-    &#128269; <a href="#" onclick="google_it(20)">Find WordPress #2</a><br/>
-    &#128269; <a href="#" onclick="google_it(33)">Find WordPress [Wayback Machine]</a><br/>
-    &#128269; <a href="#" onclick="google_it(21)">Search in GITHUB</a><br/>
-    &#128269; <a href="#" onclick="google_it(31)">Search in OpenBugBounty domain</a><br/>
-    &#128269; <a href="#" onclick="google_it(38)">Search in OpenBugBounty subdomain</a><br/>
-    &#128269; <a href="#" onclick="google_it(32)">Search in Reddit</a><br/>
-    &#128269; <a href="#" onclick="google_it(22)">Test CrossDomain</a><br/>
-    &#128269; <a href="#" onclick="google_it(23)">Check in ThreatCrowd</a><br/>
-    &#128269; <a href="#" onclick="google_it(24)">Find .SWF file (Google)</a><br/>
-    &#128269; <a href="#" onclick="google_it(25)">Find .SWF file (Yandex)</a><br/>
-    &#128269; <a href="#" onclick="google_it(26)">Search SWF in WayBack Machine</a><br/>
-    &#128269; <a href="#" onclick="google_it(27)">Search in WayBack Machine #2</a><br/>
-    &#128269; <a href="#" onclick="google_it(28)">Search in WayBack Machine #3</a><br/>
-    &#128269; <a href="#" onclick="google_it(29)">Search in WayBack Machine [List/All]</a><br/>
-    &#128269; <a href="#" onclick="google_it(30)">Check in crt.sh</a><br/>
-    <!-- &#128269; Check in CENSYS <u><a href="#" onclick="google_it(34)">[IP4]</a></u> | <u><a href="#" onclick="google_it(35)">[DOMAINS]</a></u> | <u><a href="#" onclick="google_it(36)">[CERTS]</a></u><br/> -->
-    &#128269; <a href="#" onclick="google_it(36)">Check in CENSYS [HOSTS]</a><br/>
-    &#128269; <a href="#" onclick="google_it(37)">Search in SHODAN</a><br/>
-    &#128269; <a href="#" onclick="google_it(57)">Juicy Filename</a><br/>
-    &#128269; <a href="#" onclick="google_it(58)">Corporate Communications</a><br/>
-    &#128269; <a href="#" onclick="google_it(62)">PHP extension with parameter in URL</a><br/>
-
-
-      </div>
-      </div>
-      </div>
-    </div>
+        <br/><br/>
+        
+        
     
-    </div></div></form>
-    <div style="clear: both;"></div>
+        </div></div></div>
+        <div class="column"><div style="text-align: center;">
+            <div style="display: inline-block; text-align: left;">
+                <div style="font-weight: bold; color: rgb(132, 132, 132); font-size: 30px;; margin-bottom: 1mm;">
+                    <span style="text-decoration: underline;">Divers</span>
+                    
+                </div>
+        
+        &#128269; <a href="#" onclick="google_it(6)">Login / Register / Admin pages <span style="color: rgb(81, 255, 0);">(big) </span><span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(66)">Login / Register / Admin pages <span style="color: rgb(81, 255, 0);">(big) </span><span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(666)">Login / Register / Admin pages <span style="color: rgb(255, 0, 251);">(small) </span><span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(6666)">Login / Register / Admin pages <span style="color: rgb(255, 0, 251);">(small) </span><span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(66666)">Admin pages + Panel <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(666666)">Admin pages + Panel <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(45)">Project management sites</a><br/>
+        &#128269; <a href="#" onclick="google_it(49)">Traefik <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(499)">Traefik <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(46)">Path traversal</a><br/>
+        &#128269; <a href="#" onclick="google_it(50)">Jenkins</a><br/>
+        &#128269; <a href="#" onclick="google_it(44)">Wordpress files <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(444)">Wordpress files <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(18)">Find Subdomains</a><br/>
+        &#128269; <a href="#" onclick="google_it(19)">Find Sub-Subdomains</a><br/>
+        &#128269; <a href="#" onclick="google_it(10)">Find WordPress <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(100)">Find WordPress <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(7)">SQL errors <span style="color: rgb(255, 166, 0);">(instreamset:(body))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(77)">SQL errors <span style="color: rgb(255, 166, 0);">(inbody)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(11)">Finding Backdoors <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(111)">Finding Backdoors <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(13)">Open Redirects <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(133)">Open Redirects <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(14)">Apache STRUTS RCE</a><br/>
+        &#128269; <a href="#" onclick="google_it(16)">Employees on LINKEDIN</a><br/>
+        &#128269; <a href="#" onclick="google_it(54)">Files php, aspx</a><br/>
+        &#128269; <a href="#" onclick="google_it(55)">Swagger 1<span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(555)">Swagger 1<span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(5555)">Swagger 2<span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(55555)">Swagger 2<span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+    
+    
+    
+        </div></div></div>
+        <div class="column"><div style="text-align: left;">
+            <div style="display: inline-block; text-align: left;">
+                <br/><br/>
+        &#128269; <a href="#" onclick="google_it(33)">Find WordPress [Wayback Machine]</a><br/>
+        &#128269; <a href="#" onclick="google_it(32)">Search in Reddit</a><br/>
+        &#128269; <a href="#" onclick="google_it(22)">Test CrossDomain</a><br/>
+        &#128269; <a href="#" onclick="google_it(23)">Check in ThreatCrowd</a><br/>
+        &#128269; <a href="#" onclick="google_it(62)">PHP extension with parameter in URL</a><br/>
+        &#128269; <a href="#" onclick="google_it(30)">Check in crt.sh</a><br/>
+        &#128269; <a href="#" onclick="google_it(24)">Find .SWF file (Google) <span style="color: rgb(255, 166, 0);">(instreamset:(url))</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(244)">Find .SWF file (Google) <span style="color: rgb(255, 166, 0);">(inurl)</span></a><br/>
+        &#128269; <a href="#" onclick="google_it(25)">Find .SWF file (Yandex)</a><br/>
+        &#128269; <a href="#" onclick="google_it(26)">Search SWF in WayBack Machine</a><br/>
+        &#128269; <a href="#" onclick="google_it(27)">Search in WayBack Machine #2</a><br/>
+        &#128269; <a href="#" onclick="google_it(28)">Search in WayBack Machine #3</a><br/>
+        &#128269; <a href="#" onclick="google_it(29)">Search in WayBack Machine [List/All]</a><br/>
+        <!-- &#128269; Check in CENSYS <u><a href="#" onclick="google_it(34)">[IP4]</a></u> | <u><a href="#" onclick="google_it(35)">[DOMAINS]</a></u> | <u><a href="#" onclick="google_it(36)">[CERTS]</a></u><br/> -->
+        &#128269; <a href="#" onclick="google_it(36)">Check in CENSYS [HOSTS]</a><br/>
+        &#128269; <a href="#" onclick="google_it(37)">Search in SHODAN</a><br/>
+        &#128269; <a href="#" onclick="google_it(31)">Search in OpenBugBounty domain</a><br/>
+        &#128269; <a href="#" onclick="google_it(38)">Search in OpenBugBounty subdomain</a><br/>
+    
+    
+          </div>
+          </div>
+          </div>
+        </div>
+        
+        </div></div></form>
+        <div style="clear: both;"></div>
     <hr>
     <div style="font-family: Merienda One;text-align: center;font-size: 25pt;text-shadow: 0 0 6px #0077ff, 0 0 5px #0077ff, 0 0 5px #0077ff;color: #FFF">Helper Websites<br></div><br>
     
@@ -450,10 +556,6 @@
     </div>
     
     <script src="jquery1.js"></script><script src="jquery.js"></script>
-    
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-    
-    <script  src="bg.js"></script>
     
     <!-- <br/><div style="font-family: Merienda One;text-align: center;padding: 7px 0;font-size:20px;"><img src="https://assets.faisalahmed.me/faisalname.png"></div></div>
         Original => https://dorks.faisalahmed.me/ -->
