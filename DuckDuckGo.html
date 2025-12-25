@@ -155,6 +155,9 @@
         
     switch(type)
     {
+        case 0:
+            url += '';
+            break;
         case 1:
             url += '+intitle:\"index of\"';
             break;
@@ -294,7 +297,7 @@
             url =  'https://duckduckgo.com/?q=inurl:' + domain_sans_tld + '+(\"not+for+distribution\"+|+confidential+|+\"employee+only\"+|+proprietary+|+\"top+secret\"+|+classified+|+\"trade+secret\"+|+internal+|+private+ext:xls+OR+ext:csv+OR+ext:doc+OR+ext:pdf+|+intext:\"internal+use+only\"+OR+intext:\"not+for+public+release\"+ext:doc)';
             break;
         case 422:
-            url =  'https://duckduckgo.com/?q=inurl:' + domain_sans_tld + '+(intitle:confidential+OR+intitle:restricted+intext:salary+ext:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+ext:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+ext:pdf+|+intext:confidential+intitle:ext:xls+OR+ext:xlsx+OR+ext:csv+|+intext:"internal use only")';
+            url =  'https://duckduckgo.com/?q=inurl:' + domain_sans_tld + '+(intitle:confidential+OR+intitle:restricted+intext:salary+ext:pdf+|+intext:\"client+data\"+OR+intext:\"customer+details\"+intitle:confidential+ext:docx+|+intitle:classified+OR+intitle:\"top+secret\"+intext:password+ext:pdf+|+intext:confidential+ext:xls+OR+ext:xlsx+OR+ext:csv+|+intext:"internal use only")';
             break;
         case 44:
             url +=  '+(inurl:wp-content+|+inurl:wp-includes)';
@@ -372,9 +375,15 @@
     }
     </script>
     
-    <div style="padding-top: 20px;height: 100px; display: flex;justify-content: center;font-size: 35px;color: #0077ff;"><b>Target Domain:</b>
+    <div style="padding-top: 20px;height: 100px; display: flex;justify-content: center;font-size: 35px;color: #0077ff;"><b>Target Domain:</b><br>
+     
+
     
         <input style="outline: none;font-weight: bold" id="target" name="target" placeholder="site.com" autofocus="" type="text"><br/></div>
+        
+
+<div style="padding-top: 1px;height: 20px; display: flex;justify-content: center;font-size: 25px">&#128269; <a href="#" onclick="google_it(0)">Requête de base <span style="color: rgb(255, 166, 0);">(site:)</span></a></div>
+
         
         <div class="row">
           <div class="column"><div style="text-align: right;">
@@ -383,8 +392,7 @@
                 <div style="font-weight: bold; color: rgb(132, 132, 132); font-size: 30px;; margin-bottom: 1mm;">
                     <span style="text-decoration: none;">🕵️</span>
                     <span style="text-decoration: underline;">PII</span>
-                    
-                </div>
+                    </div>
         &#128269; <a href="#" onclick="google_it(57)">Juicy Filename</a><br/>
         &#128269; <a href="#" onclick="google_it(56)">Juicy Extensions</a><br/>
         &#128269; <a href="#" onclick="google_it(65)">Server Errors</a><br/>
@@ -435,7 +443,6 @@
     &#128269; <a href="#" onclick="google_it(68)">SQLi Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(69)">SSRF Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(70)">LFI Prone Parameters</a><br/>
-    &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(71)">RCE Prone Parameters</a><br/>
     &#128269; <a href="#" onclick="google_it(72)">File upload endpoints</a><br/>
     &#128269; <a href="#" onclick="google_it(73)">API Docs</a><br/>
